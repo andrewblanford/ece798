@@ -31,25 +31,19 @@
 #define BAUD_RATE 19200
 
 /************************ DEFINITIONS ******************************/
- #define CONSOLE_IsPutReady()        (U2STAbits.TRMT)
- #define CONSOLE_IsGetReady()        (IFS1bits.U2RXIF)
+ #define CONSOLE_IsPutReady()        (U1STAbits.TRMT)
+ #define CONSOLE_IsGetReady()        (IFS0bits.U1RXIF)
 
 
 //Define UART TX and RX registers
-#define TREG        U2TXREG
-#define RREG        U2RXREG
-#define UART_STA    U2STA
-#define UART_MODE   U2MODE
-#define UART_SPBRG  U2BRG
-#define UART_IF     IFS1bits.U2RXIF
-#define MODE_UARTEN U2MODEbits.UARTEN
-#define STA_UTXEN   U2STAbits.UTXEN
-
-//#define UART_TX_PIN TRISCbits.TRISC6
-//#define UART_RX_PIN TRISDbits.TRISD2
-
-//#define INPUT_PIN   1
-//#define OUPUT_PIN   0
+#define TREG        U1TXREG
+#define RREG        U1RXREG
+#define UART_STA    U1STA
+#define UART_MODE   U1MODE
+#define UART_SPBRG  U1BRG
+#define UART_IF     IFS0bits.U1RXIF
+#define MODE_UARTEN U1MODEbits.UARTEN
+#define STA_UTXEN   U1STAbits.UTXEN
 
 //FUNCTION PROTOTYPES
 /*********************************************************************

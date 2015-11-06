@@ -94,7 +94,7 @@ void DemoOutput_Greeting(void)
         #endif
     #elif defined(MRF89XA)
         #if defined(PROTOCOL_P2P)
-            LCDDisplay((char *)"Simple P2P Demo  MRF89XA Node 1", 0, true);
+            //LCDDisplay((char *)"Simple P2P Demo  MRF89XA Node 1", 0, true);
         #endif
         #if defined(PROTOCOL_MIWI)
             LCDDisplay((char *)"Simple MiWi Demo MRF89XA Node 1", 0, true);
@@ -174,14 +174,14 @@ void DemoOutput_Channel(uint8_t channel, uint8_t Step)
 {
     if( Step == 0 )
     {
-        LCDDisplay((char *)"Connecting Peer  on Channel %d ", channel, true);
+        //LCDDisplay((char *)"Connecting Peer  on Channel %d ", channel, true);
         Printf("\r\nConnecting Peer on Channel ");
         CONSOLE_PrintDec(channel);
         Printf("\r\n");
     }
     else
     {    
-        LCDDisplay((char *)" Connected Peer  on Channel %d", channel, true);
+        //LCDDisplay((char *)" Connected Peer  on Channel %d", channel, true);
         Printf("\r\nConnected Peer on Channel ");
         CONSOLE_PrintDec(channel);
         Printf("\r\n");
@@ -190,13 +190,7 @@ void DemoOutput_Channel(uint8_t channel, uint8_t Step)
 
 void DemoOutput_Instruction(void)
 {
-    #if defined(EXPLORER16)
-        LCDDisplay((char *)"RD6: Broadcast  RD7: Unicast", 0, false);
-    #elif defined(PIC18_EXPLORER)
-        LCDDisplay((char *)"RB0: Broadcast  RA5: Unicast", 0, false);
-    #elif defined(EIGHT_BIT_WIRELESS_BOARD)
-        LCDDisplay((char *)"RB0: Broadcast  RB2: Unicast", 0, false);
-    #endif
+
 }    
 
 
@@ -244,7 +238,7 @@ void DemoOutput_HandleMessage(void)
 
 void DemoOutput_UpdateTxRx(uint8_t TxNum, uint8_t RxNum)
 {
-    LCDTRXCount(TxNum, RxNum);  
+     //LCDTRXCount(TxNum, RxNum);  
 }    
 
 void DemoOutput_ChannelError(uint8_t channel)
@@ -257,7 +251,7 @@ void DemoOutput_ChannelError(uint8_t channel)
 void DemoOutput_UnicastFail(void)
 {
     Printf("\r\nUnicast Failed\r\n");                  
-    LCDDisplay((char *)" Unicast Failed", 0, true);
+   // LCDDisplay((char *)" Unicast Failed", 0, true);
 }    
 
 
@@ -280,43 +274,6 @@ void DemoOutput_UnicastFail(void)
  ********************************************************************/
 uint8_t ButtonPressed(void)
 {
-    MIWI_TICK tickDifference;
-
-    if(PUSH_BUTTON_1 == 0)
-    {
-        //if the button was previously not pressed
-        if(PUSH_BUTTON_pressed == false)
-        {
-            PUSH_BUTTON_pressed = true;
-            PUSH_BUTTON_press_time = MiWi_TickGet();
-            return 1;
-        }
-    }
-    else if(PUSH_BUTTON_2 == 0)
-    {
-        //if the button was previously not pressed
-        if(PUSH_BUTTON_pressed == false)
-        {
-            PUSH_BUTTON_pressed = true;
-            PUSH_BUTTON_press_time = MiWi_TickGet();
-            return 2;
-        }
-    }
-    else
-    {
-        //get the current time
-        MIWI_TICK t = MiWi_TickGet();
-
-        //if the button has been released long enough
-        tickDifference.Val = MiWi_TickGetDiff(t,PUSH_BUTTON_press_time);
-
-        //then we can mark it as not pressed
-        if(tickDifference.Val > DEBOUNCE_TIME)
-        {
-            PUSH_BUTTON_pressed = false;
-        }
-    }
-
     return 0;
 }
 

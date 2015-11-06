@@ -26,11 +26,9 @@
 
 //CONFIGURATION PARAMETERS
 
-#pragma config FNOSC = PRI
-#pragma config POSCMOD = XT
-#pragma config JTAGEN = OFF
-#pragma config FWDTEN = OFF
-#pragma config WDTPS = PS1024
+//#pragma config FNOSC = PRI
+//#pragma config JTAGEN = OFF
+//#pragma config FWDTEN = OFF
 
 
 /*********************************************************************
@@ -53,41 +51,43 @@
 
 void SYSTEM_Initialize(void)
 {
-    CONFIG
-    // Make RB0 as Digital input
-    AD1PCFGbits.PCFG2 = 1;
-
     // set I/O ports
-    BUTTON_1_TRIS = 1;
-    BUTTON_2_TRIS = 1;
     LED_1_TRIS = 0;
-    LED_2_TRIS = 0;
 
-   
-
+    // RF Interrupt
     RF_INT_TRIS = 1;
 
+    // SPI to RF board
     SDI_TRIS = 1;
     SDO_TRIS = 0;
     SCK_TRIS = 0;
     SPI_SDO = 0;
     SPI_SCK = 0;
 
+    // map SPI pins
+    // SDI
+    __builtin_write_OSCCONL(OSCCON & 0xbf);
+    RPINR20bits.SDI1R = 0b01000;
+    // SCK1
+    RPOR3bits.RP6R = 0b01000;
+    // SDO
+    RPOR4bits.RP9R = 0b00111;
+    __builtin_write_OSCCONL(OSCCON | 0x40);
     
+    // data port slave select
     Data_nCS_TRIS = 0;
-    Config_nCS_TRIS = 0;
     Data_nCS = 1;
+    // config port slave select
+    Config_nCS_TRIS = 0;
     Config_nCS = 1;
+    
     IRQ1_INT_TRIS = 1;
-    IRQ0_INT_TRIS = 1;
+    //IRQ0_INT_TRIS = 1;
 
 
     #if defined(HARDWARE_SPI)
         SPI1CON1 = 0b0000000100111110;
         SPI1STAT = 0x8000;
-
-        SPI2CON1 = 0b0000000100111110;
-        SPI2STAT = 0x8000;
     #endif
 
    
@@ -101,27 +101,10 @@ void SYSTEM_Initialize(void)
     IPC5bits.INT1IP2 = 1;
     IPC5bits.INT1IP1 = 0;
     IPC5bits.INT1IP0 = 0;
-        
-    
-
-    // Make RB0 as Digital input
-    AD1PCFGbits.PCFG2 = 1;
-
-    #if defined(ENABLE_NVM)
-        EE_nCS_TRIS = 0;
-        EE_nCS = 1;
-    #endif
-
-    
+   
     PHY_IRQ1 = 0;
-    PHY_IRQ0 = 0;
-    PHY_RESETn_TRIS = 1;
- 
-
-
-
-    LCD_Initialize();
-
-}
+    //PHY_IRQ0 = 0;
+    //PHY_RESETn_TRIS = 1;
+ }
 
 

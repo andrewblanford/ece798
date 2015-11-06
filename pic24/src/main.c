@@ -98,9 +98,9 @@ MAIN_RETURN main ( void )
     SYSTEM_Initialize();
     CONSOLE_Initialize();
     DemoOutput_Greeting();
-    
+    Printf("Hello\n");
     LED_1 = 0;
-    LED_2 = 0;
+    //LED_2 = 0;
 
     /*******************************************************************/
     // Initialize Microchip proprietary protocol. Which protocol to use
@@ -118,11 +118,7 @@ MAIN_RETURN main ( void )
     if( MiApp_SetChannel(myChannel) == false )
     {
         DemoOutput_ChannelError(myChannel);
-        #if defined(__XC8__)
-            return;
-        #else
-            return 0;
-        #endif
+        return 0;
     }
     
     /*******************************************************************/
@@ -152,7 +148,7 @@ MAIN_RETURN main ( void )
     i = MiApp_EstablishConnection(0xFF, CONN_MODE_DIRECT);
 
     /*******************************************************************/
-    // Display current opertion on LCD of demo board, if applicable
+    // Display current operation on LCD of demo board, if applicable
     /*******************************************************************/
     if( i != 0xFF )
     {
@@ -226,7 +222,7 @@ MAIN_RETURN main ( void )
             DemoOutput_UpdateTxRx(TxNum, ++RxNum);
             
             // Toggle LED2 to indicate receiving a packet.
-            LED_2 ^= 1;
+            //LED_2 ^= 1;
             
             /*******************************************************************/
             // Function MiApp_DiscardMessage is used to release the current 
@@ -323,11 +319,7 @@ MAIN_RETURN main ( void )
         }
     }
 
-    #if defined(__XC8__)
-        return;
-    #else
-        return 0;
-    #endif
+    return 0;
 }
 
 
