@@ -95,8 +95,17 @@ MAIN_RETURN main ( void )
     /*******************************************************************/
     // Initialize the system
     /*******************************************************************/
+    // unlock peripheral configuration
+    __builtin_write_OSCCONL(0x46);
+    __builtin_write_OSCCONL(0x57);
+    OSCCONbits.IOLOCK = 0;
     SYSTEM_Initialize();
     CONSOLE_Initialize();
+    // lock peripheral configuration
+    __builtin_write_OSCCONL(0x46);
+    __builtin_write_OSCCONL(0x57);
+    OSCCONbits.IOLOCK = 1;
+    
     DemoOutput_Greeting();
     Printf("Hello\n");
     LED_1 = 0;

@@ -26,7 +26,7 @@
 
 //CONFIGURATION PARAMETERS
 
-//#pragma config FNOSC = PRI
+#pragma config FNOSC = PRI
 //#pragma config JTAGEN = OFF
 //#pragma config FWDTEN = OFF
 
@@ -51,6 +51,9 @@
 
 void SYSTEM_Initialize(void)
 {
+    // RF reset pin in Hi-z state
+    RF_RESET_TRIS = 1;
+    
     // set I/O ports
     LED_1_TRIS = 0;
 
@@ -66,13 +69,11 @@ void SYSTEM_Initialize(void)
 
     // map SPI pins
     // SDI
-    __builtin_write_OSCCONL(OSCCON & 0xbf);
     RPINR20bits.SDI1R = 0b01000;
-    // SCK1
+    // SCK1 out RP8
     RPOR3bits.RP6R = 0b01000;
-    // SDO
+    // SDO out RP7
     RPOR4bits.RP9R = 0b00111;
-    __builtin_write_OSCCONL(OSCCON | 0x40);
     
     // data port slave select
     Data_nCS_TRIS = 0;
@@ -85,7 +86,7 @@ void SYSTEM_Initialize(void)
     //IRQ0_INT_TRIS = 1;
 
 
-    #if defined(HARDWARE_SPI)
+    #if defined(HARDWARE_SPI)        
         SPI1CON1 = 0b0000000100111110;
         SPI1STAT = 0x8000;
     #endif

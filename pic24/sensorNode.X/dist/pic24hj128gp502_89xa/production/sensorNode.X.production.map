@@ -68,11 +68,11 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200                0x9e            0xed  (237)
 .const                       0x29e               0x480           0x6c0  (1728)
-.text                        0x71e              0x1c60          0x2a90  (10896)
-.dinit                      0x237e                0x58            0x84  (132)
-.text                       0x23d6                0x5c            0x8a  (138)
+.text                        0x71e              0x1c56          0x2a81  (10881)
+.dinit                      0x2374                0x58            0x84  (132)
+.text                       0x23cc                0x5c            0x8a  (138)
 
-                     Total program memory used (bytes):         0x334b  (13131) 9%
+                     Total program memory used (bytes):         0x333c  (13116) 9%
 
 
 Data Memory  [Origin = 0x800, Length = 0x2000]
@@ -224,55 +224,55 @@ External Symbols in Program Memory (by address):
                   0x001dde                  _CCM_Enc
                   0x001e5e                  _CCM_Dec
                   0x001eea                  _main
-                  0x002030                  _CONSOLE_Initialize
-                  0x002080                  _CONSOLE_PutString
-                  0x0020a6                  _CONSOLE_Put
-                  0x0020be                  _CONSOLE_Get
-                  0x0020d8                  _CONSOLE_PrintHex
-                  0x002106                  _CONSOLE_PrintDec
-                  0x002168                  _DemoOutput_Greeting
-                  0x002192                  _DemoOutput_Channel
-                  0x0021bc                  _DemoOutput_Instruction
-                  0x0021c2                  _DemoOutput_HandleMessage
-                  0x00224c                  _DemoOutput_UpdateTxRx
-                  0x002256                  _DemoOutput_ChannelError
-                  0x00226a                  _DemoOutput_UnicastFail
-                  0x002274                  _ButtonPressed
-                  0x00227c                  _DELAY_10us
-                  0x0022c4                  _DELAY_ms
-                  0x002302                  _SYSTEM_Initialize
-                  0x0023d6                  _SPIPut
-                  0x0023f6                  _SPIGet
-                  0x002404                  _InitSymbolTimer
-                  0x002410                  _MiWi_TickGet
+                  0x00206c                  _CONSOLE_Initialize
+                  0x002098                  _CONSOLE_PutString
+                  0x0020be                  _CONSOLE_Put
+                  0x0020d6                  _CONSOLE_Get
+                  0x0020f0                  _CONSOLE_PrintHex
+                  0x00211e                  _CONSOLE_PrintDec
+                  0x002180                  _DemoOutput_Greeting
+                  0x0021aa                  _DemoOutput_Channel
+                  0x0021d4                  _DemoOutput_Instruction
+                  0x0021da                  _DemoOutput_HandleMessage
+                  0x002264                  _DemoOutput_UpdateTxRx
+                  0x00226e                  _DemoOutput_ChannelError
+                  0x002282                  _DemoOutput_UnicastFail
+                  0x00228c                  _ButtonPressed
+                  0x002294                  _DELAY_10us
+                  0x0022dc                  _DELAY_ms
+                  0x00231a                  _SYSTEM_Initialize
+                  0x0023cc                  _SPIPut
+                  0x0023ec                  _SPIGet
+                  0x0023fa                  _InitSymbolTimer
+                  0x002406                  _MiWi_TickGet
 
 External Symbols in Program Memory (by name):
 
                   0x0019f6                  _AddConnection
-                  0x002274                  _ButtonPressed
+                  0x00228c                  _ButtonPressed
                   0x001d48                  _CBC_MAC
                   0x001e5e                  _CCM_Dec
                   0x001dde                  _CCM_Enc
-                  0x0020be                  _CONSOLE_Get
-                  0x002030                  _CONSOLE_Initialize
-                  0x002106                  _CONSOLE_PrintDec
-                  0x0020d8                  _CONSOLE_PrintHex
-                  0x0020a6                  _CONSOLE_Put
-                  0x002080                  _CONSOLE_PutString
+                  0x0020d6                  _CONSOLE_Get
+                  0x00206c                  _CONSOLE_Initialize
+                  0x00211e                  _CONSOLE_PrintDec
+                  0x0020f0                  _CONSOLE_PrintHex
+                  0x0020be                  _CONSOLE_Put
+                  0x002098                  _CONSOLE_PutString
                   0x001c9e                  _CTR
                   0x00031c                  _DE
-                  0x00227c                  _DELAY_10us
-                  0x0022c4                  _DELAY_ms
-                  0x002192                  _DemoOutput_Channel
-                  0x002256                  _DemoOutput_ChannelError
-                  0x002168                  _DemoOutput_Greeting
-                  0x0021c2                  _DemoOutput_HandleMessage
-                  0x0021bc                  _DemoOutput_Instruction
-                  0x00226a                  _DemoOutput_UnicastFail
-                  0x00224c                  _DemoOutput_UpdateTxRx
+                  0x002294                  _DELAY_10us
+                  0x0022dc                  _DELAY_ms
+                  0x0021aa                  _DemoOutput_Channel
+                  0x00226e                  _DemoOutput_ChannelError
+                  0x002180                  _DemoOutput_Greeting
+                  0x0021da                  _DemoOutput_HandleMessage
+                  0x0021d4                  _DemoOutput_Instruction
+                  0x002282                  _DemoOutput_UnicastFail
+                  0x002264                  _DemoOutput_UpdateTxRx
                   0x0018ac                  _DumpConnection
                   0x0006ce                  _InitConfigRegs
-                  0x002404                  _InitSymbolTimer
+                  0x0023fa                  _InitSymbolTimer
                   0x001202                  _MacroNop
                   0x0016a8                  _MiApp_BroadcastPacket
                   0x001bea                  _MiApp_ConnectionMode
@@ -293,15 +293,15 @@ External Symbols in Program Memory (by name):
                   0x0008fc                  _MiMAC_SetChannel
                   0x00094a                  _MiMAC_SetPower
                   0x00029e                  _MiWi
-                  0x002410                  _MiWi_TickGet
+                  0x002406                  _MiWi_TickGet
                   0x00120a                  _P2PTasks
                   0x00068e                  _PVALUE
                   0x00076a                  _RegisterRead
                   0x000734                  _RegisterSet
-                  0x0023f6                  _SPIGet
-                  0x0023d6                  _SPIPut
+                  0x0023ec                  _SPIGet
+                  0x0023cc                  _SPIPut
                   0x0006ae                  _SVALUE
-                  0x002302                  _SYSTEM_Initialize
+                  0x00231a                  _SYSTEM_Initialize
                   0x0015fc                  _SendPacket
                   0x000a02                  _SetRFMode
                   0x0007d0                  _TxPacket
@@ -446,23 +446,23 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x60c0
+.debug_info       0x000000       0x620f
  *(.debug_info)
  .debug_info      0x000000       0x16b6 build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_89xa.o
  .debug_info      0x0016b6        0x16f build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_crc.o
  .debug_info      0x001825        0x44f build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_security.o
  .debug_info      0x001c74        0x15c build/pic24hj128gp502_89xa/production/_ext/1310079843/miwi_nvm.o
  .debug_info      0x001dd0       0x136e build/pic24hj128gp502_89xa/production/_ext/1310079843/miwi_p2p.o
- .debug_info      0x00313e        0xba7 build/pic24hj128gp502_89xa/production/_ext/162297189/console.o
- .debug_info      0x003ce5        0x251 build/pic24hj128gp502_89xa/production/_ext/162297189/delay.o
- .debug_info      0x003f36        0x356 build/pic24hj128gp502_89xa/production/_ext/162297189/spi.o
- .debug_info      0x00428c        0x492 build/pic24hj128gp502_89xa/production/_ext/162297189/symbol.o
- .debug_info      0x00471e        0xf6a build/pic24hj128gp502_89xa/production/_ext/162297189/system.o
- .debug_info      0x005688        0x68e build/pic24hj128gp502_89xa/production/_ext/1360937237/demo_ouput.o
- .debug_info      0x005d16        0x3aa build/pic24hj128gp502_89xa/production/_ext/1360937237/main.o
+ .debug_info      0x00313e        0xb85 build/pic24hj128gp502_89xa/production/_ext/162297189/console.o
+ .debug_info      0x003cc3        0x251 build/pic24hj128gp502_89xa/production/_ext/162297189/delay.o
+ .debug_info      0x003f14        0x356 build/pic24hj128gp502_89xa/production/_ext/162297189/spi.o
+ .debug_info      0x00426a        0x492 build/pic24hj128gp502_89xa/production/_ext/162297189/symbol.o
+ .debug_info      0x0046fc        0xf48 build/pic24hj128gp502_89xa/production/_ext/162297189/system.o
+ .debug_info      0x005644        0x68e build/pic24hj128gp502_89xa/production/_ext/1360937237/demo_ouput.o
+ .debug_info      0x005cd2        0x53d build/pic24hj128gp502_89xa/production/_ext/1360937237/main.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0xe0b
+.debug_abbrev     0x000000        0xe24
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x2a4 build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_89xa.o
  .debug_abbrev    0x0002a4         0x1f build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_crc.o
@@ -473,24 +473,24 @@ __FUID3
  .debug_abbrev    0x000822         0x68 build/pic24hj128gp502_89xa/production/_ext/162297189/delay.o
  .debug_abbrev    0x00088a         0xc5 build/pic24hj128gp502_89xa/production/_ext/162297189/spi.o
  .debug_abbrev    0x00094f        0x14a build/pic24hj128gp502_89xa/production/_ext/162297189/symbol.o
- .debug_abbrev    0x000a99         0xfa build/pic24hj128gp502_89xa/production/_ext/162297189/system.o
- .debug_abbrev    0x000b93        0x170 build/pic24hj128gp502_89xa/production/_ext/1360937237/demo_ouput.o
- .debug_abbrev    0x000d03        0x108 build/pic24hj128gp502_89xa/production/_ext/1360937237/main.o
+ .debug_abbrev    0x000a99         0xe9 build/pic24hj128gp502_89xa/production/_ext/162297189/system.o
+ .debug_abbrev    0x000b82        0x170 build/pic24hj128gp502_89xa/production/_ext/1360937237/demo_ouput.o
+ .debug_abbrev    0x000cf2        0x132 build/pic24hj128gp502_89xa/production/_ext/1360937237/main.o
 
-.debug_line       0x000000       0x29d9
+.debug_line       0x000000       0x29f1
  *(.debug_line)
  .debug_line      0x000000        0xc9f build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_89xa.o
  .debug_line      0x000c9f         0x24 build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_crc.o
  .debug_line      0x000cc3        0x2d7 build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_security.o
  .debug_line      0x000f9a         0x24 build/pic24hj128gp502_89xa/production/_ext/1310079843/miwi_nvm.o
  .debug_line      0x000fbe        0xbd1 build/pic24hj128gp502_89xa/production/_ext/1310079843/miwi_p2p.o
- .debug_line      0x001b8f        0x292 build/pic24hj128gp502_89xa/production/_ext/162297189/console.o
- .debug_line      0x001e21        0x142 build/pic24hj128gp502_89xa/production/_ext/162297189/delay.o
- .debug_line      0x001f63        0x16e build/pic24hj128gp502_89xa/production/_ext/162297189/spi.o
- .debug_line      0x0020d1        0x18d build/pic24hj128gp502_89xa/production/_ext/162297189/symbol.o
- .debug_line      0x00225e        0x1b2 build/pic24hj128gp502_89xa/production/_ext/162297189/system.o
- .debug_line      0x002410        0x306 build/pic24hj128gp502_89xa/production/_ext/1360937237/demo_ouput.o
- .debug_line      0x002716        0x2c3 build/pic24hj128gp502_89xa/production/_ext/1360937237/main.o
+ .debug_line      0x001b8f        0x282 build/pic24hj128gp502_89xa/production/_ext/162297189/console.o
+ .debug_line      0x001e11        0x142 build/pic24hj128gp502_89xa/production/_ext/162297189/delay.o
+ .debug_line      0x001f53        0x16e build/pic24hj128gp502_89xa/production/_ext/162297189/spi.o
+ .debug_line      0x0020c1        0x18d build/pic24hj128gp502_89xa/production/_ext/162297189/symbol.o
+ .debug_line      0x00224e        0x1aa build/pic24hj128gp502_89xa/production/_ext/162297189/system.o
+ .debug_line      0x0023f8        0x306 build/pic24hj128gp502_89xa/production/_ext/1360937237/demo_ouput.o
+ .debug_line      0x0026fe        0x2f3 build/pic24hj128gp502_89xa/production/_ext/1360937237/main.o
 
 .debug_frame      0x000000        0x468
  *(.debug_frame)
@@ -505,7 +505,7 @@ __FUID3
  .debug_frame     0x0003b0         0x94 build/pic24hj128gp502_89xa/production/_ext/1360937237/demo_ouput.o
  .debug_frame     0x000444         0x24 build/pic24hj128gp502_89xa/production/_ext/1360937237/main.o
 
-.debug_str        0x000000        0x349
+.debug_str        0x000000        0x354
  *(.debug_str)
  .debug_str       0x000000        0x114 build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_89xa.o
  .debug_str       0x000114         0x1e build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_security.o
@@ -515,7 +515,7 @@ __FUID3
  .debug_str       0x0002a3          0xa build/pic24hj128gp502_89xa/production/_ext/162297189/symbol.o
  .debug_str       0x0002ad         0x76 build/pic24hj128gp502_89xa/production/_ext/162297189/system.o
  .debug_str       0x000323          0xa build/pic24hj128gp502_89xa/production/_ext/1360937237/demo_ouput.o
- .debug_str       0x00032d         0x1c build/pic24hj128gp502_89xa/production/_ext/1360937237/main.o
+ .debug_str       0x00032d         0x27 build/pic24hj128gp502_89xa/production/_ext/1360937237/main.o
 
 .debug_loc
  *(.debug_loc)
@@ -1702,7 +1702,7 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x0000f0        0x7ad
+                  0x0000f0        0x7ce
  .debug_pubtypes
                   0x0000f0        0x1ba build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_89xa.o
  .debug_pubtypes
@@ -1726,38 +1726,38 @@ LOAD data_init
  .debug_pubtypes
                   0x0007b9         0xa9 build/pic24hj128gp502_89xa/production/_ext/1360937237/demo_ouput.o
  .debug_pubtypes
-                  0x000862         0x3b build/pic24hj128gp502_89xa/production/_ext/1360937237/main.o
+                  0x000862         0x5c build/pic24hj128gp502_89xa/production/_ext/1360937237/main.o
 
 __c30_signature
-                  0x00089d         0x54
+                  0x0008be         0x54
  __c30_signature
-                  0x00089d          0x6 build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_89xa.o
+                  0x0008be          0x6 build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_89xa.o
  __c30_signature
-                  0x0008a3          0x6 build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_crc.o
+                  0x0008c4          0x6 build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_crc.o
  __c30_signature
-                  0x0008a9          0x6 build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_security.o
+                  0x0008ca          0x6 build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_security.o
  __c30_signature
-                  0x0008af          0x6 build/pic24hj128gp502_89xa/production/_ext/1310079843/miwi_nvm.o
+                  0x0008d0          0x6 build/pic24hj128gp502_89xa/production/_ext/1310079843/miwi_nvm.o
  __c30_signature
-                  0x0008b5          0x6 build/pic24hj128gp502_89xa/production/_ext/1310079843/miwi_p2p.o
+                  0x0008d6          0x6 build/pic24hj128gp502_89xa/production/_ext/1310079843/miwi_p2p.o
  __c30_signature
-                  0x0008bb          0x6 build/pic24hj128gp502_89xa/production/_ext/162297189/console.o
+                  0x0008dc          0x6 build/pic24hj128gp502_89xa/production/_ext/162297189/console.o
  __c30_signature
-                  0x0008c1          0x6 build/pic24hj128gp502_89xa/production/_ext/162297189/delay.o
+                  0x0008e2          0x6 build/pic24hj128gp502_89xa/production/_ext/162297189/delay.o
  __c30_signature
-                  0x0008c7          0x6 build/pic24hj128gp502_89xa/production/_ext/162297189/spi.o
+                  0x0008e8          0x6 build/pic24hj128gp502_89xa/production/_ext/162297189/spi.o
  __c30_signature
-                  0x0008cd          0x6 build/pic24hj128gp502_89xa/production/_ext/162297189/symbol.o
+                  0x0008ee          0x6 build/pic24hj128gp502_89xa/production/_ext/162297189/symbol.o
  __c30_signature
-                  0x0008d3          0x6 build/pic24hj128gp502_89xa/production/_ext/162297189/system.o
+                  0x0008f4          0x6 build/pic24hj128gp502_89xa/production/_ext/162297189/system.o
  __c30_signature
-                  0x0008d9          0x6 build/pic24hj128gp502_89xa/production/_ext/1360937237/demo_ouput.o
+                  0x0008fa          0x6 build/pic24hj128gp502_89xa/production/_ext/1360937237/demo_ouput.o
  __c30_signature
-                  0x0008df          0x6 build/pic24hj128gp502_89xa/production/_ext/1360937237/main.o
+                  0x000900          0x6 build/pic24hj128gp502_89xa/production/_ext/1360937237/main.o
  __c30_signature
-                  0x0008e5          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
+                  0x000906          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
  __c30_signature
-                  0x0008eb          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
+                  0x00090c          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
 
 .nbss               0x0800         0x1e
  .nbss              0x0800         0x12 build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_89xa.o
@@ -1818,6 +1818,9 @@ __c30_signature
  .bss               0x0998          0x4 build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_security.o
                     0x0998                  _tmpBlock
 
+.config_IESO      0xf80006          0x2
+ .config_IESO     0xf80006          0x2 build/pic24hj128gp502_89xa/production/_ext/162297189/system.o
+
 .const              0x829e        0x480 load address 0x00029e  
  .const             0x829e        0x356 build/pic24hj128gp502_89xa/production/_ext/1360937237/demo_ouput.o
                     0x829e                  _MiWi
@@ -1831,7 +1834,7 @@ __c30_signature
                     0x870e                  _mySecurityKey
  .const             0x8716          0x8 build/pic24hj128gp502_89xa/production/_ext/1360937237/main.o
 
-.text             0x00071e       0x1c60
+.text             0x00071e       0x1c56
  .text            0x00071e        0xae4 build/pic24hj128gp502_89xa/production/_ext/638162376/drv_mrf_miwi_89xa.o
                   0x00071e                  _getReceiverBW
                   0x000734                  _RegisterSet
@@ -1871,37 +1874,37 @@ __c30_signature
                   0x001d48                  _CBC_MAC
                   0x001dde                  _CCM_Enc
                   0x001e5e                  _CCM_Dec
- .text            0x001eea        0x146 build/pic24hj128gp502_89xa/production/_ext/1360937237/main.o
+ .text            0x001eea        0x182 build/pic24hj128gp502_89xa/production/_ext/1360937237/main.o
                   0x001eea                  _main
- .text            0x002030        0x138 build/pic24hj128gp502_89xa/production/_ext/162297189/console.o
-                  0x002030                  _CONSOLE_Initialize
-                  0x002080                  _CONSOLE_PutString
-                  0x0020a6                  _CONSOLE_Put
-                  0x0020be                  _CONSOLE_Get
-                  0x0020d8                  _CONSOLE_PrintHex
-                  0x002106                  _CONSOLE_PrintDec
- .text            0x002168        0x114 build/pic24hj128gp502_89xa/production/_ext/1360937237/demo_ouput.o
-                  0x002168                  _DemoOutput_Greeting
-                  0x002192                  _DemoOutput_Channel
-                  0x0021bc                  _DemoOutput_Instruction
-                  0x0021c2                  _DemoOutput_HandleMessage
-                  0x00224c                  _DemoOutput_UpdateTxRx
-                  0x002256                  _DemoOutput_ChannelError
-                  0x00226a                  _DemoOutput_UnicastFail
-                  0x002274                  _ButtonPressed
- .text            0x00227c         0x86 build/pic24hj128gp502_89xa/production/_ext/162297189/delay.o
-                  0x00227c                  _DELAY_10us
-                  0x0022c4                  _DELAY_ms
- .text            0x002302         0x7c build/pic24hj128gp502_89xa/production/_ext/162297189/system.o
-                  0x002302                  _SYSTEM_Initialize
+ .text            0x00206c        0x114 build/pic24hj128gp502_89xa/production/_ext/162297189/console.o
+                  0x00206c                  _CONSOLE_Initialize
+                  0x002098                  _CONSOLE_PutString
+                  0x0020be                  _CONSOLE_Put
+                  0x0020d6                  _CONSOLE_Get
+                  0x0020f0                  _CONSOLE_PrintHex
+                  0x00211e                  _CONSOLE_PrintDec
+ .text            0x002180        0x114 build/pic24hj128gp502_89xa/production/_ext/1360937237/demo_ouput.o
+                  0x002180                  _DemoOutput_Greeting
+                  0x0021aa                  _DemoOutput_Channel
+                  0x0021d4                  _DemoOutput_Instruction
+                  0x0021da                  _DemoOutput_HandleMessage
+                  0x002264                  _DemoOutput_UpdateTxRx
+                  0x00226e                  _DemoOutput_ChannelError
+                  0x002282                  _DemoOutput_UnicastFail
+                  0x00228c                  _ButtonPressed
+ .text            0x002294         0x86 build/pic24hj128gp502_89xa/production/_ext/162297189/delay.o
+                  0x002294                  _DELAY_10us
+                  0x0022dc                  _DELAY_ms
+ .text            0x00231a         0x5a build/pic24hj128gp502_89xa/production/_ext/162297189/system.o
+                  0x00231a                  _SYSTEM_Initialize
 
-.dinit            0x00237e         0x58
- .dinit           0x00237e         0x58 data_init
+.dinit            0x002374         0x58
+ .dinit           0x002374         0x58 data_init
 
-.text             0x0023d6         0x5c
- .text            0x0023d6         0x2e build/pic24hj128gp502_89xa/production/_ext/162297189/spi.o
-                  0x0023d6                  _SPIPut
-                  0x0023f6                  _SPIGet
- .text            0x002404         0x2e build/pic24hj128gp502_89xa/production/_ext/162297189/symbol.o
-                  0x002404                  _InitSymbolTimer
-                  0x002410                  _MiWi_TickGet
+.text             0x0023cc         0x5c
+ .text            0x0023cc         0x2e build/pic24hj128gp502_89xa/production/_ext/162297189/spi.o
+                  0x0023cc                  _SPIPut
+                  0x0023ec                  _SPIGet
+ .text            0x0023fa         0x2e build/pic24hj128gp502_89xa/production/_ext/162297189/symbol.o
+                  0x0023fa                  _InitSymbolTimer
+                  0x002406                  _MiWi_TickGet

@@ -45,6 +45,8 @@
 #define Config_nCS_TRIS             TRISBbits.TRISB3
 #define Data_nCS                    LATBbits.LATB2
 #define Data_nCS_TRIS               TRISBbits.TRISB2
+#define RF_RESET                    LATAbits.LATA2
+#define RF_RESET_TRIS               TRISAbits.TRISA2
 //#define PHY_RESETn                  LATGbits.LATG2
 //#define PHY_RESETn_TRIS             TRISGbits.TRISG2
 

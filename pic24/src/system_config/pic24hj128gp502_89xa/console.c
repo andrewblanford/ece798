@@ -54,11 +54,9 @@ unsigned char CharacterArray[]={'0','1','2','3','4','5','6','7','8','9','A','B',
 ********************************************************************/
 void CONSOLE_Initialize(void)
 {
-    // configure uart 1 perhipheral 
-    __builtin_write_OSCCONL(OSCCON & 0xbf);
+    // configure uart 1 peripheral 
     RPINR18bits.U1RXR = 10;
     RPOR5bits.RP11R = 3;
-    __builtin_write_OSCCONL(OSCCON | 0x40);
     
     UART_SPBRG   = (SYS_CLK_FrequencySystemGet()/2/16)/BAUD_RATE-1;
     UART_IF = 0;
