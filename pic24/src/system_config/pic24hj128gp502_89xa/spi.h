@@ -29,9 +29,6 @@
 void SPIPut(uint8_t v);
 uint8_t SPIGet(void);
 
-void SPIPut2(uint8_t v);
-uint8_t SPIGet2(void);
-
 /************************ MACROS ***********************************/
 #define SPIInit()   SSPIF = 1
 

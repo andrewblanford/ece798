@@ -30,17 +30,17 @@
 #define SOFTWARE_SECURITY
 
 //TRANSCEIVER DEFINITIONS
-#define PHY_IRQ1                    IFS0bits.INT0IF
-#define PHY_IRQ1_En                 IEC0bits.INT0IE
+#define PHY_IRQ1                    IFS1bits.INT2IF
+#define PHY_IRQ1_En                 IEC1bits.INT2IE
 //#define PHY_IRQ0                    IFS1bits.INT1IF
 //#define PHY_IRQ0_En                 IEC1bits.INT1IE
 
 #define IRQ1_INT_PIN                PORTBbits.RB7
-#define IRQ1_INT_TRIS               TRISBbits.TRISB9
+#define IRQ1_INT_TRIS               TRISBbits.TRISB7
 //#define IRQ0_INT_PIN                PORTEbits.RE8
 //#define IRQ0_INT_TRIS               TRISEbits.TRISE8
 
-#define PHY_IRQ1_TRIS               TRISBbits.TRISB9
+#define PHY_IRQ1_TRIS               TRISBbits.TRISB7
 #define Config_nCS                  LATBbits.LATB3
 #define Config_nCS_TRIS             TRISBbits.TRISB3
 #define Data_nCS                    LATBbits.LATB2

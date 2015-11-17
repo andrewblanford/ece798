@@ -31,7 +31,7 @@ DEFAULTCONF=pic24hj128gp502_89xa
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=pic24hj128gp502_89xa 
+ALLCONFS=pic24hj128gp502_89xa Test 
 
 
 # build
@@ -46,12 +46,14 @@ ALLCONFS=pic24hj128gp502_89xa
 # clobber
 .clobber-impl: .clobber-pre .depcheck-impl
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pic24hj128gp502_89xa clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Test clean
 
 
 
 # all
 .all-impl: .all-pre .depcheck-impl
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pic24hj128gp502_89xa build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Test build
 
 
 

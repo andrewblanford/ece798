@@ -82,12 +82,15 @@ void SYSTEM_Initialize(void)
     Config_nCS_TRIS = 0;
     Config_nCS = 1;
     
+    // IRQ1  
     IRQ1_INT_TRIS = 1;
+    // Config RP7 for INT2
+    RPINR1bits.INT2R = 7;
     //IRQ0_INT_TRIS = 1;
 
 
     #if defined(HARDWARE_SPI)        
-        SPI1CON1 = 0b0000000100111110;
+        SPI1CON1 = 0b0000000100111100;
         SPI1STAT = 0x8000;
     #endif
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project>
-  <executable name="dist/pic24hj128gp502_89xa/production/sensorNode.X.production.elf">
+  <executable name="dist/Test/debug/sensorNode.X.debug.elf">
     <memory name="data">
       <units>bytes</units>
       <length>8192</length>
@@ -11,8 +11,8 @@
     <memory name="program">
       <units>bytes</units>
       <length>131328</length>
-      <used>13149</used>
-      <free>118179</free>
+      <used>13116</used>
+      <free>118212</free>
     </memory>
   </executable>
 </project>
