@@ -90,6 +90,7 @@ int main (void) {
 
     // put radio in transmit mode
     RF24_stopListening();
+    // send 1 32bit value
     if (!RF24_write(&aValue, sizeof(uint32_t))) {
 
     }

@@ -14,13 +14,20 @@ void systemInit() {
 }
 
 void configDigital() {
-    // setup RA2, RA3 and RB4 as digital input for address bits
+    // setup RA2, RA3 as digital input for address bits
     ADDRESS0_TRIS = 1;
     ADDRESS1_TRIS = 1;
+#ifdef USE_3_ADDRESS_BITS
+    // RB4 digital input also
+    ADDRESS2_TRIS = 1;
+#endif
 }
 
 uint8_t getNodeAddress() {
     uint8_t addr = 0;
+#ifdef USE_3_ADDRESS_BITS
+    addr |= (ADDRESS2 << 2);
+#endif
     addr |= (ADDRESS1 << 1);
     addr |= (ADDRESS0 << 0);
     return addr;

@@ -25,6 +25,11 @@
 #define ADDRESS0_TRIS         _TRISA2
 #define ADDRESS1              _RA3
 #define ADDRESS1_TRIS         _TRISA3
+// if RB4 is available for 3rd address bit it can be used
+#ifdef USE_3_ADDRESS_BITS
+#define ADDRESS2_TRIS         _TRISB4
+#define ADDRESS2              _RB4
+#endif
 
 void systemInit();
 uint8_t getNodeAddress();
