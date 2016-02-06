@@ -4,6 +4,7 @@
 # 
 
 import time
+from threading import Lock
 from RF24 import *
 import struct
 import RPi.GPIO as GPIO
@@ -27,6 +28,7 @@ GRAPH_INTERVAL = 1 * 10
 pipes = [0x65646F4E31, 0x65646F4E32, 0x65646F4E33, 0x65646F4E34]
 
 dataToGraph = []
+dataLock = Lock()
 
 # use GPIO numbering
 GPIO.setmode(GPIO.BCM)
@@ -65,7 +67,11 @@ def radioCallback(channel):
             data = struct.unpack("L", recv_buffer)
             # get the current time
             now = dt.today()
-            dataToGraph[pipe - 1].append((now, data[0]))
+            # try the lock - returns false instead of blocking
+            # if lock not available, we drop the data sample (don't want to block interrupt)
+            if dataLock.acquire(False):
+               dataToGraph[pipe - 1].append((now, data[0]))
+               dataLock.release()
 
             print('Got payload from={} value="{}"'.format(pipe, data[0]))
 
@@ -77,17 +83,16 @@ print "Graph interval", GRAPH_INTERVAL, "seconds"
 
 # forever loop
 while 1:
-   # unmask rx_ready interrupt
-   radio.maskIRQ(True, True, False)
    # wait while data is captured
    time.sleep(GRAPH_INTERVAL)
-   # mask rx_ready interrupt while we make the graph
-   radio.maskIRQ(True, True, True)
+   # lock the data buffers
+   dataLock.acquire()
    # create a graph image
    filename = graphutils.createAndSaveGraph(dataToGraph)
    print "Graph saved"
-   # post to web
-   graphutils.postResults(filename)
-   print "Done sending..."
-   # TODO: clear old data
+   # clear old data
+   for i in range(len(dataToGraph)):
+      del dataToGraph[i][:]
+   # release lock with fresh buffers
+   dataLock.release()
    

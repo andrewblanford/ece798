@@ -56,6 +56,8 @@ def createAndSaveGraph(data):
    plt.gca().xaxis.set_major_locator(mdates.MinuteLocator())
    fig.autofmt_xdate()
 
+   print "Graph created... "
+
    # save the graph as an image
    plt.savefig(filename, bbox_inches='tight')
 
