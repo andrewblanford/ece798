@@ -69,16 +69,20 @@
 #include "adc.h"
 
 int main (void) {
-  const uint8_t pipe[][6] = {"1Node", "2Node", "3Node", "4Node"};
+  // up to 8 potential pipe addresses based on address select bits
+  const uint8_t pipe[][6] = {"1Node", "2Node", "3Node", "4Node", "5Node", "6Node", "7Node", "8Node"};
+  // analog result
   uint32_t aValue;
+  // address selection
   uint8_t pipeAddr = 0;
 
-  // analog, spi, serial
+  // setup system peripherals
   systemInit();
+ 
   // get the pipe number from hardware address
   pipeAddr = getNodeAddress();
   
-  // setup RF24 library
+  // setup RF24 library (requires SPI already enabled)
   RF24_begin();
   RF24_setRetries(15, 15);
   RF24_openWritingPipe(pipe[pipeAddr]);
