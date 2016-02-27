@@ -2,3 +2,6 @@
 *.d
 *.elf
 *.pyc
+*.swp
+*.swo
+*.png
