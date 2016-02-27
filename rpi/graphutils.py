@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 
+# Andrew Blanford
 # Functions for graphing 
-
-import os
-import sys
 
 # graphing libraries
 import matplotlib as mpl
@@ -11,7 +9,7 @@ import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
-
+# Timestamps
 from datetime import datetime as dt
 
 # matlab style symbols for graph points
@@ -63,17 +61,6 @@ def createAndSaveGraph(data):
 
    return filename
 
-# Post the file to the GMU server
-# overwrites 'result.png'
-def postResults(filename):
-   # copy the file to generic name 'result.png' so the webpage will see it
-   cmd = 'scp ' + filename + ' ablanfor@mason.gmu.edu:~/public_html/result.png'
-   print cmd
-   os.system(cmd + ' > /dev/null 2>&1')
-   #os.system(cmd)
-
-
-
 # testing...
 if __name__ == '__main__':
    data = []
@@ -88,5 +75,3 @@ if __name__ == '__main__':
             test += 1
 
    name = createAndSaveGraph(data)
-
-   postResults(name)

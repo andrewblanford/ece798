@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+
+# Andrew Blanford
+# Monitor a directory and send any new files over the network
+# uses watchdog library and scp protocol
+
 import sys
 import time
 import os
@@ -21,6 +26,12 @@ class NewFileSender(FileSystemEventHandler):
       os.system(cmd + ' > /dev/null 2>&1')
 
 
+# Main function
+# take 2 arguments 
+# 1: directory to monitor, (default '.')
+# 2: destination (default './result.png')
+# destination can be scp destination eg. 
+# ablanfor@mason.gmu.edu:~/public_html/result.png
 if __name__ == "__main__":
     path = sys.argv[1] if len(sys.argv) > 1 else '.'
     dest = sys.argv[2] if len(sys.argv) > 2 else './result.png'
