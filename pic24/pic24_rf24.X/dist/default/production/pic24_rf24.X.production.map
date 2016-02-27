@@ -70,12 +70,12 @@ Program Memory  [Origin = 0x200, Length = 0x15600]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x346           0x4e9  (1257)
-.const                       0x546                0x2a            0x3f  (63)
-.text                        0x570               0xa14           0xf1e  (3870)
-.init.delay32                0xf84                0x1c            0x2a  (42)
-.dinit                       0xfa0                0x16            0x21  (33)
+.const                       0x546                0x42            0x63  (99)
+.text                        0x588               0xa2c           0xf42  (3906)
+.init.delay32                0xfb4                0x1c            0x2a  (42)
+.dinit                       0xfd0                0x16            0x21  (33)
 
-                     Total program memory used (bytes):         0x1491  (5265) 4%
+                     Total program memory used (bytes):         0x14d9  (5337) 4%
 
 
 Data Memory  [Origin = 0x800, Length = 0x2000]
@@ -114,126 +114,126 @@ External Symbols in Program Memory (by address):
                   0x0004a2                  ___muldi3
                   0x0004f4                  ___umuldi3
                   0x000538                  _memcpy
-                  0x000570                  _RF24_read_registers
-                  0x0005b2                  _RF24_read_register
-                  0x0005cc                  _RF24_write_registers
-                  0x000610                  _RF24_write_register
-                  0x000634                  _RF24_write_payload
-                  0x0006ac                  _RF24_read_payload
-                  0x000724                  _RF24_flush_rx
-                  0x00072e                  _RF24_flush_tx
-                  0x000738                  _RF24_WriteCommand
-                  0x00074e                  _RF24_get_status
-                  0x000758                  _RF24_setChannel
-                  0x000774                  _RF24_getChannel
-                  0x00077e                  _RF24_setPayloadSize
-                  0x000792                  _RF24_getPayloadSize
-                  0x00079a                  _RF24_begin
-                  0x000814                  _RF24_startListening
-                  0x000856                  _RF24_stopListening
-                  0x0008c8                  _RF24_powerDown
-                  0x0008de                  _RF24_powerUp
-                  0x000904                  _RF24_write_multicast
-                  0x000942                  _RF24_write
-                  0x000954                  _RF24_startFastWrite
-                  0x00097e                  _RF24_rxFifoFull
-                  0x00098a                  _RF24_txStandBy
-                  0x0009ba                  _RF24_maskIRQ
-                  0x0009ee                  _RF24_getDynamicPayloadSize
-                  0x000a1c                  _RF24_available
-                  0x000a26                  _RF24_available_pipe
-                  0x000a56                  _RF24_read
-                  0x000a6c                  _RF24_whatHappened
-                  0x000a98                  _RF24_openWritingPipe
-                  0x000abc                  _RF24_setAddressWidth
-                  0x000ade                  _RF24_openReadingPipe
-                  0x000b4c                  _RF24_closeReadingPipe
-                  0x000b72                  _RF24_toggle_features
-                  0x000b84                  _RF24_enableDynamicPayloads
-                  0x000ba8                  _RF24_enableAckPayload
-                  0x000bca                  _RF24_enableDynamicAck
-                  0x000bdc                  _RF24_writeAckPayload
-                  0x000c28                  _RF24_isAckPayloadAvailable
-                  0x000c40                  _RF24_isPVariant
-                  0x000c48                  _RF24_setAutoAck_all
-                  0x000c64                  _RF24_setAutoAck_pipe
-                  0x000caa                  _RF24_testCarrier
-                  0x000cb6                  _RF24_testRPD
-                  0x000cc2                  _RF24_setPALevel
-                  0x000cf0                  _RF24_getPALevel
-                  0x000d02                  _RF24_setDataRate
-                  0x000d66                  _RF24_getDataRate
-                  0x000d94                  _RF24_setCRCLength
-                  0x000dbe                  _RF24_getCRCLength
-                  0x000dfc                  _RF24_disableCRC
-                  0x000e10                  _RF24_setRetries
-                  0x000e2c                  _configAnalog
-                  0x000e68                  _getADC1
-                  0x000e9c                  _configSPI1
-                  0x000eda                  _writeSPI1
-                  0x000f02                  _main
-                  0x000f48                  _systemInit
-                  0x000f54                  _configDigital
-                  0x000f5e                  _getNodeAddress
-                  0x000f84                  ___delay32
+                  0x000588                  _RF24_read_registers
+                  0x0005ca                  _RF24_read_register
+                  0x0005e4                  _RF24_write_registers
+                  0x000628                  _RF24_write_register
+                  0x00064c                  _RF24_write_payload
+                  0x0006c4                  _RF24_read_payload
+                  0x00073c                  _RF24_flush_rx
+                  0x000746                  _RF24_flush_tx
+                  0x000750                  _RF24_WriteCommand
+                  0x000766                  _RF24_get_status
+                  0x000770                  _RF24_setChannel
+                  0x00078c                  _RF24_getChannel
+                  0x000796                  _RF24_setPayloadSize
+                  0x0007aa                  _RF24_getPayloadSize
+                  0x0007b2                  _RF24_begin
+                  0x00082c                  _RF24_startListening
+                  0x00086e                  _RF24_stopListening
+                  0x0008e0                  _RF24_powerDown
+                  0x0008f6                  _RF24_powerUp
+                  0x00091c                  _RF24_write_multicast
+                  0x00095a                  _RF24_write
+                  0x00096c                  _RF24_startFastWrite
+                  0x000996                  _RF24_rxFifoFull
+                  0x0009a2                  _RF24_txStandBy
+                  0x0009d2                  _RF24_maskIRQ
+                  0x000a06                  _RF24_getDynamicPayloadSize
+                  0x000a34                  _RF24_available
+                  0x000a3e                  _RF24_available_pipe
+                  0x000a6e                  _RF24_read
+                  0x000a84                  _RF24_whatHappened
+                  0x000ab0                  _RF24_openWritingPipe
+                  0x000ad4                  _RF24_setAddressWidth
+                  0x000af6                  _RF24_openReadingPipe
+                  0x000b64                  _RF24_closeReadingPipe
+                  0x000b8a                  _RF24_toggle_features
+                  0x000b9c                  _RF24_enableDynamicPayloads
+                  0x000bc0                  _RF24_enableAckPayload
+                  0x000be2                  _RF24_enableDynamicAck
+                  0x000bf4                  _RF24_writeAckPayload
+                  0x000c40                  _RF24_isAckPayloadAvailable
+                  0x000c58                  _RF24_isPVariant
+                  0x000c60                  _RF24_setAutoAck_all
+                  0x000c7c                  _RF24_setAutoAck_pipe
+                  0x000cc2                  _RF24_testCarrier
+                  0x000cce                  _RF24_testRPD
+                  0x000cda                  _RF24_setPALevel
+                  0x000d08                  _RF24_getPALevel
+                  0x000d1a                  _RF24_setDataRate
+                  0x000d7e                  _RF24_getDataRate
+                  0x000dac                  _RF24_setCRCLength
+                  0x000dd6                  _RF24_getCRCLength
+                  0x000e14                  _RF24_disableCRC
+                  0x000e28                  _RF24_setRetries
+                  0x000e44                  _configAnalog
+                  0x000e80                  _getADC1
+                  0x000ebc                  _configSPI1
+                  0x000efa                  _writeSPI1
+                  0x000f22                  _main
+                  0x000f72                  _systemInit
+                  0x000f7e                  _configDigital
+                  0x000f8e                  _getNodeAddress
+                  0x000fb4                  ___delay32
 
 External Symbols in Program Memory (by name):
 
-                  0x000738                  _RF24_WriteCommand
-                  0x000a1c                  _RF24_available
-                  0x000a26                  _RF24_available_pipe
-                  0x00079a                  _RF24_begin
-                  0x000b4c                  _RF24_closeReadingPipe
-                  0x000dfc                  _RF24_disableCRC
-                  0x000ba8                  _RF24_enableAckPayload
-                  0x000bca                  _RF24_enableDynamicAck
-                  0x000b84                  _RF24_enableDynamicPayloads
-                  0x000724                  _RF24_flush_rx
-                  0x00072e                  _RF24_flush_tx
-                  0x000dbe                  _RF24_getCRCLength
-                  0x000774                  _RF24_getChannel
-                  0x000d66                  _RF24_getDataRate
-                  0x0009ee                  _RF24_getDynamicPayloadSize
-                  0x000cf0                  _RF24_getPALevel
-                  0x000792                  _RF24_getPayloadSize
-                  0x00074e                  _RF24_get_status
-                  0x000c28                  _RF24_isAckPayloadAvailable
-                  0x000c40                  _RF24_isPVariant
-                  0x0009ba                  _RF24_maskIRQ
-                  0x000ade                  _RF24_openReadingPipe
-                  0x000a98                  _RF24_openWritingPipe
-                  0x0008c8                  _RF24_powerDown
-                  0x0008de                  _RF24_powerUp
-                  0x000a56                  _RF24_read
-                  0x0006ac                  _RF24_read_payload
-                  0x0005b2                  _RF24_read_register
-                  0x000570                  _RF24_read_registers
-                  0x00097e                  _RF24_rxFifoFull
-                  0x000abc                  _RF24_setAddressWidth
-                  0x000c48                  _RF24_setAutoAck_all
-                  0x000c64                  _RF24_setAutoAck_pipe
-                  0x000d94                  _RF24_setCRCLength
-                  0x000758                  _RF24_setChannel
-                  0x000d02                  _RF24_setDataRate
-                  0x000cc2                  _RF24_setPALevel
-                  0x00077e                  _RF24_setPayloadSize
-                  0x000e10                  _RF24_setRetries
-                  0x000954                  _RF24_startFastWrite
-                  0x000814                  _RF24_startListening
-                  0x000856                  _RF24_stopListening
-                  0x000caa                  _RF24_testCarrier
-                  0x000cb6                  _RF24_testRPD
-                  0x000b72                  _RF24_toggle_features
-                  0x00098a                  _RF24_txStandBy
-                  0x000a6c                  _RF24_whatHappened
-                  0x000942                  _RF24_write
-                  0x000bdc                  _RF24_writeAckPayload
-                  0x000904                  _RF24_write_multicast
-                  0x000634                  _RF24_write_payload
-                  0x000610                  _RF24_write_register
-                  0x0005cc                  _RF24_write_registers
+                  0x000750                  _RF24_WriteCommand
+                  0x000a34                  _RF24_available
+                  0x000a3e                  _RF24_available_pipe
+                  0x0007b2                  _RF24_begin
+                  0x000b64                  _RF24_closeReadingPipe
+                  0x000e14                  _RF24_disableCRC
+                  0x000bc0                  _RF24_enableAckPayload
+                  0x000be2                  _RF24_enableDynamicAck
+                  0x000b9c                  _RF24_enableDynamicPayloads
+                  0x00073c                  _RF24_flush_rx
+                  0x000746                  _RF24_flush_tx
+                  0x000dd6                  _RF24_getCRCLength
+                  0x00078c                  _RF24_getChannel
+                  0x000d7e                  _RF24_getDataRate
+                  0x000a06                  _RF24_getDynamicPayloadSize
+                  0x000d08                  _RF24_getPALevel
+                  0x0007aa                  _RF24_getPayloadSize
+                  0x000766                  _RF24_get_status
+                  0x000c40                  _RF24_isAckPayloadAvailable
+                  0x000c58                  _RF24_isPVariant
+                  0x0009d2                  _RF24_maskIRQ
+                  0x000af6                  _RF24_openReadingPipe
+                  0x000ab0                  _RF24_openWritingPipe
+                  0x0008e0                  _RF24_powerDown
+                  0x0008f6                  _RF24_powerUp
+                  0x000a6e                  _RF24_read
+                  0x0006c4                  _RF24_read_payload
+                  0x0005ca                  _RF24_read_register
+                  0x000588                  _RF24_read_registers
+                  0x000996                  _RF24_rxFifoFull
+                  0x000ad4                  _RF24_setAddressWidth
+                  0x000c60                  _RF24_setAutoAck_all
+                  0x000c7c                  _RF24_setAutoAck_pipe
+                  0x000dac                  _RF24_setCRCLength
+                  0x000770                  _RF24_setChannel
+                  0x000d1a                  _RF24_setDataRate
+                  0x000cda                  _RF24_setPALevel
+                  0x000796                  _RF24_setPayloadSize
+                  0x000e28                  _RF24_setRetries
+                  0x00096c                  _RF24_startFastWrite
+                  0x00082c                  _RF24_startListening
+                  0x00086e                  _RF24_stopListening
+                  0x000cc2                  _RF24_testCarrier
+                  0x000cce                  _RF24_testRPD
+                  0x000b8a                  _RF24_toggle_features
+                  0x0009a2                  _RF24_txStandBy
+                  0x000a84                  _RF24_whatHappened
+                  0x00095a                  _RF24_write
+                  0x000bf4                  _RF24_writeAckPayload
+                  0x00091c                  _RF24_write_multicast
+                  0x00064c                  _RF24_write_payload
+                  0x000628                  _RF24_write_register
+                  0x0005e4                  _RF24_write_registers
                   0x00029a                  __DefaultInterrupt
-                  0x000f84                  ___delay32
+                  0x000fb4                  ___delay32
                   0x0003e6                  ___divdi3
                   0x000446                  ___moddi3
                   0x0004a2                  ___muldi3
@@ -245,15 +245,15 @@ External Symbols in Program Memory (by name):
                   0x00023c                  __data_init_standard
                   0x00022c                  __psv_init
                   0x000200                  __resetPRI
-                  0x000e2c                  _configAnalog
-                  0x000f54                  _configDigital
-                  0x000e9c                  _configSPI1
-                  0x000e68                  _getADC1
-                  0x000f5e                  _getNodeAddress
-                  0x000f02                  _main
+                  0x000e44                  _configAnalog
+                  0x000f7e                  _configDigital
+                  0x000ebc                  _configSPI1
+                  0x000e80                  _getADC1
+                  0x000f8e                  _getNodeAddress
+                  0x000f22                  _main
                   0x000538                  _memcpy
-                  0x000f48                  _systemInit
-                  0x000eda                  _writeSPI1
+                  0x000f72                  _systemInit
+                  0x000efa                  _writeSPI1
 
 Memory Configuration
 
@@ -402,30 +402,30 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x3082
+.debug_info       0x000000       0x3306
  *(.debug_info)
  .debug_info      0x000000       0x1519 build/default/production/_ext/1472/RF24.o
- .debug_info      0x001519        0xb8c build/default/production/_ext/1472/adc.o
- .debug_info      0x0020a5        0x1b9 build/default/production/_ext/1472/main.o
- .debug_info      0x00225e        0xb23 build/default/production/_ext/1472/spi.o
- .debug_info      0x002d81        0x301 build/default/production/_ext/1472/system.o
+ .debug_info      0x001519        0xb9d build/default/production/_ext/1472/adc.o
+ .debug_info      0x0020b6        0x265 build/default/production/_ext/1472/main.o
+ .debug_info      0x00231b        0xb23 build/default/production/_ext/1472/spi.o
+ .debug_info      0x002e3e        0x4c8 build/default/production/_ext/1472/system.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x533
+.debug_abbrev     0x000000        0x57c
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x21c build/default/production/_ext/1472/RF24.o
  .debug_abbrev    0x00021c         0xda build/default/production/_ext/1472/adc.o
- .debug_abbrev    0x0002f6         0x6d build/default/production/_ext/1472/main.o
- .debug_abbrev    0x000363        0x122 build/default/production/_ext/1472/spi.o
- .debug_abbrev    0x000485         0xae build/default/production/_ext/1472/system.o
+ .debug_abbrev    0x0002f6         0xb6 build/default/production/_ext/1472/main.o
+ .debug_abbrev    0x0003ac        0x122 build/default/production/_ext/1472/spi.o
+ .debug_abbrev    0x0004ce         0xae build/default/production/_ext/1472/system.o
 
-.debug_line       0x000000       0x1434
+.debug_line       0x000000       0x14d2
  *(.debug_line)
  .debug_line      0x000000        0xe4a build/default/production/_ext/1472/RF24.o
- .debug_line      0x000e4a        0x1af build/default/production/_ext/1472/adc.o
- .debug_line      0x000ff9        0x108 build/default/production/_ext/1472/main.o
- .debug_line      0x001101        0x1b7 build/default/production/_ext/1472/spi.o
- .debug_line      0x0012b8        0x17c build/default/production/_ext/1472/system.o
+ .debug_line      0x000e4a        0x1c7 build/default/production/_ext/1472/adc.o
+ .debug_line      0x001011        0x176 build/default/production/_ext/1472/main.o
+ .debug_line      0x001187        0x1b7 build/default/production/_ext/1472/spi.o
+ .debug_line      0x00133e        0x194 build/default/production/_ext/1472/system.o
 
 .debug_frame      0x000000        0x434
  *(.debug_frame)
@@ -435,12 +435,13 @@ __FUID3
  .debug_frame     0x0003bc         0x34 build/default/production/_ext/1472/spi.o
  .debug_frame     0x0003f0         0x44 build/default/production/_ext/1472/system.o
 
-.debug_str        0x000000        0x115
+.debug_str        0x000000        0x134
  *(.debug_str)
  .debug_str       0x000000         0x53 build/default/production/_ext/1472/RF24.o
  .debug_str       0x000053         0x59 build/default/production/_ext/1472/adc.o
- .debug_str       0x0000ac         0x55 build/default/production/_ext/1472/spi.o
- .debug_str       0x000101         0x14 build/default/production/_ext/1472/system.o
+ .debug_str       0x0000ac          0x9 build/default/production/_ext/1472/main.o
+ .debug_str       0x0000b5         0x55 build/default/production/_ext/1472/spi.o
+ .debug_str       0x00010a         0x2a build/default/production/_ext/1472/system.o
 
 .debug_loc
  *(.debug_loc)
@@ -1607,44 +1608,44 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x000078        0x358
+                  0x000078        0x3b7
  .debug_pubtypes
                   0x000078         0xb5 build/default/production/_ext/1472/RF24.o
  .debug_pubtypes
                   0x00012d        0x118 build/default/production/_ext/1472/adc.o
  .debug_pubtypes
-                  0x000245         0x2b build/default/production/_ext/1472/main.o
+                  0x000245         0x48 build/default/production/_ext/1472/main.o
  .debug_pubtypes
-                  0x000270        0x104 build/default/production/_ext/1472/spi.o
+                  0x00028d        0x104 build/default/production/_ext/1472/spi.o
  .debug_pubtypes
-                  0x000374         0x5c build/default/production/_ext/1472/system.o
+                  0x000391         0x9e build/default/production/_ext/1472/system.o
 
 __c30_signature
-                  0x0003d0         0x48
+                  0x00042f         0x48
  __c30_signature
-                  0x0003d0          0x6 build/default/production/_ext/1472/RF24.o
+                  0x00042f          0x6 build/default/production/_ext/1472/RF24.o
  __c30_signature
-                  0x0003d6          0x6 build/default/production/_ext/1472/adc.o
+                  0x000435          0x6 build/default/production/_ext/1472/adc.o
  __c30_signature
-                  0x0003dc          0x6 build/default/production/_ext/1472/main.o
+                  0x00043b          0x6 build/default/production/_ext/1472/main.o
  __c30_signature
-                  0x0003e2          0x6 build/default/production/_ext/1472/spi.o
+                  0x000441          0x6 build/default/production/_ext/1472/spi.o
  __c30_signature
-                  0x0003e8          0x6 build/default/production/_ext/1472/system.o
+                  0x000447          0x6 build/default/production/_ext/1472/system.o
  __c30_signature
-                  0x0003ee          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
+                  0x00044d          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
  __c30_signature
-                  0x0003f4          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
+                  0x000453          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
  __c30_signature
-                  0x0003fa          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
+                  0x000459          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
  __c30_signature
-                  0x000400          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x00045f          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
  __c30_signature
-                  0x000406          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\libm-elf.a(muldi3.eo)
+                  0x000465          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\libm-elf.a(muldi3.eo)
  __c30_signature
-                  0x00040c          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\libm-elf.a(umuldi3.eo)
+                  0x00046b          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\libm-elf.a(umuldi3.eo)
  __c30_signature
-                  0x000412          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-c-elf.a(memcpy.XXeo)
+                  0x000471          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-c-elf.a(memcpy.XXeo)
 
 .nbss               0x0800          0x6
  .nbss              0x0800          0x6 build/default/production/_ext/1472/RF24.o
@@ -1682,81 +1683,81 @@ __c30_signature
 .config_RBS       0xf80000          0x2
  .config_RBS      0xf80000          0x2 build/default/production/_ext/1472/main.o
 
-.const              0x8546         0x2a load address 0x000546  
- .const             0x8546         0x18 build/default/production/_ext/1472/main.o
- .const             0x855e         0x12 build/default/production/_ext/1472/RF24.o
+.const              0x8546         0x42 load address 0x000546  
+ .const             0x8546         0x30 build/default/production/_ext/1472/main.o
+ .const             0x8576         0x12 build/default/production/_ext/1472/RF24.o
 
-.text             0x000570        0xa14
- .text            0x000570        0x8bc build/default/production/_ext/1472/RF24.o
-                  0x000570                  _RF24_read_registers
-                  0x0005b2                  _RF24_read_register
-                  0x0005cc                  _RF24_write_registers
-                  0x000610                  _RF24_write_register
-                  0x000634                  _RF24_write_payload
-                  0x0006ac                  _RF24_read_payload
-                  0x000724                  _RF24_flush_rx
-                  0x00072e                  _RF24_flush_tx
-                  0x000738                  _RF24_WriteCommand
-                  0x00074e                  _RF24_get_status
-                  0x000758                  _RF24_setChannel
-                  0x000774                  _RF24_getChannel
-                  0x00077e                  _RF24_setPayloadSize
-                  0x000792                  _RF24_getPayloadSize
-                  0x00079a                  _RF24_begin
-                  0x000814                  _RF24_startListening
-                  0x000856                  _RF24_stopListening
-                  0x0008c8                  _RF24_powerDown
-                  0x0008de                  _RF24_powerUp
-                  0x000904                  _RF24_write_multicast
-                  0x000942                  _RF24_write
-                  0x000954                  _RF24_startFastWrite
-                  0x00097e                  _RF24_rxFifoFull
-                  0x00098a                  _RF24_txStandBy
-                  0x0009ba                  _RF24_maskIRQ
-                  0x0009ee                  _RF24_getDynamicPayloadSize
-                  0x000a1c                  _RF24_available
-                  0x000a26                  _RF24_available_pipe
-                  0x000a56                  _RF24_read
-                  0x000a6c                  _RF24_whatHappened
-                  0x000a98                  _RF24_openWritingPipe
-                  0x000abc                  _RF24_setAddressWidth
-                  0x000ade                  _RF24_openReadingPipe
-                  0x000b4c                  _RF24_closeReadingPipe
-                  0x000b72                  _RF24_toggle_features
-                  0x000b84                  _RF24_enableDynamicPayloads
-                  0x000ba8                  _RF24_enableAckPayload
-                  0x000bca                  _RF24_enableDynamicAck
-                  0x000bdc                  _RF24_writeAckPayload
-                  0x000c28                  _RF24_isAckPayloadAvailable
-                  0x000c40                  _RF24_isPVariant
-                  0x000c48                  _RF24_setAutoAck_all
-                  0x000c64                  _RF24_setAutoAck_pipe
-                  0x000caa                  _RF24_testCarrier
-                  0x000cb6                  _RF24_testRPD
-                  0x000cc2                  _RF24_setPALevel
-                  0x000cf0                  _RF24_getPALevel
-                  0x000d02                  _RF24_setDataRate
-                  0x000d66                  _RF24_getDataRate
-                  0x000d94                  _RF24_setCRCLength
-                  0x000dbe                  _RF24_getCRCLength
-                  0x000dfc                  _RF24_disableCRC
-                  0x000e10                  _RF24_setRetries
- .text            0x000e2c         0x70 build/default/production/_ext/1472/adc.o
-                  0x000e2c                  _configAnalog
-                  0x000e68                  _getADC1
- .text            0x000e9c         0x66 build/default/production/_ext/1472/spi.o
-                  0x000e9c                  _configSPI1
-                  0x000eda                  _writeSPI1
- .text            0x000f02         0x46 build/default/production/_ext/1472/main.o
-                  0x000f02                  _main
- .text            0x000f48         0x3c build/default/production/_ext/1472/system.o
-                  0x000f48                  _systemInit
-                  0x000f54                  _configDigital
-                  0x000f5e                  _getNodeAddress
+.text             0x000588        0xa2c
+ .text            0x000588        0x8bc build/default/production/_ext/1472/RF24.o
+                  0x000588                  _RF24_read_registers
+                  0x0005ca                  _RF24_read_register
+                  0x0005e4                  _RF24_write_registers
+                  0x000628                  _RF24_write_register
+                  0x00064c                  _RF24_write_payload
+                  0x0006c4                  _RF24_read_payload
+                  0x00073c                  _RF24_flush_rx
+                  0x000746                  _RF24_flush_tx
+                  0x000750                  _RF24_WriteCommand
+                  0x000766                  _RF24_get_status
+                  0x000770                  _RF24_setChannel
+                  0x00078c                  _RF24_getChannel
+                  0x000796                  _RF24_setPayloadSize
+                  0x0007aa                  _RF24_getPayloadSize
+                  0x0007b2                  _RF24_begin
+                  0x00082c                  _RF24_startListening
+                  0x00086e                  _RF24_stopListening
+                  0x0008e0                  _RF24_powerDown
+                  0x0008f6                  _RF24_powerUp
+                  0x00091c                  _RF24_write_multicast
+                  0x00095a                  _RF24_write
+                  0x00096c                  _RF24_startFastWrite
+                  0x000996                  _RF24_rxFifoFull
+                  0x0009a2                  _RF24_txStandBy
+                  0x0009d2                  _RF24_maskIRQ
+                  0x000a06                  _RF24_getDynamicPayloadSize
+                  0x000a34                  _RF24_available
+                  0x000a3e                  _RF24_available_pipe
+                  0x000a6e                  _RF24_read
+                  0x000a84                  _RF24_whatHappened
+                  0x000ab0                  _RF24_openWritingPipe
+                  0x000ad4                  _RF24_setAddressWidth
+                  0x000af6                  _RF24_openReadingPipe
+                  0x000b64                  _RF24_closeReadingPipe
+                  0x000b8a                  _RF24_toggle_features
+                  0x000b9c                  _RF24_enableDynamicPayloads
+                  0x000bc0                  _RF24_enableAckPayload
+                  0x000be2                  _RF24_enableDynamicAck
+                  0x000bf4                  _RF24_writeAckPayload
+                  0x000c40                  _RF24_isAckPayloadAvailable
+                  0x000c58                  _RF24_isPVariant
+                  0x000c60                  _RF24_setAutoAck_all
+                  0x000c7c                  _RF24_setAutoAck_pipe
+                  0x000cc2                  _RF24_testCarrier
+                  0x000cce                  _RF24_testRPD
+                  0x000cda                  _RF24_setPALevel
+                  0x000d08                  _RF24_getPALevel
+                  0x000d1a                  _RF24_setDataRate
+                  0x000d7e                  _RF24_getDataRate
+                  0x000dac                  _RF24_setCRCLength
+                  0x000dd6                  _RF24_getCRCLength
+                  0x000e14                  _RF24_disableCRC
+                  0x000e28                  _RF24_setRetries
+ .text            0x000e44         0x78 build/default/production/_ext/1472/adc.o
+                  0x000e44                  _configAnalog
+                  0x000e80                  _getADC1
+ .text            0x000ebc         0x66 build/default/production/_ext/1472/spi.o
+                  0x000ebc                  _configSPI1
+                  0x000efa                  _writeSPI1
+ .text            0x000f22         0x50 build/default/production/_ext/1472/main.o
+                  0x000f22                  _main
+ .text            0x000f72         0x42 build/default/production/_ext/1472/system.o
+                  0x000f72                  _systemInit
+                  0x000f7e                  _configDigital
+                  0x000f8e                  _getNodeAddress
 
-.init.delay32     0x000f84         0x1c
- .init.delay32    0x000f84         0x1c c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
-                  0x000f84                  ___delay32
+.init.delay32     0x000fb4         0x1c
+ .init.delay32    0x000fb4         0x1c c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
+                  0x000fb4                  ___delay32
 
-.dinit            0x000fa0         0x16
- .dinit           0x000fa0         0x16 data_init
+.dinit            0x000fd0         0x16
+ .dinit           0x000fd0         0x16 data_init

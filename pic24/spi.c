@@ -44,19 +44,20 @@ void configSPI1(void) {
  * \param u16_c Value to write to SPI TXBUF
  * \return Value read from SPI RXBUF
  */
-
 uint16_t writeSPI1(uint16_t u16_c) {
-
   // check for error and clear it
   if (SPI1STATbits.SPIROV) {
     //clear the error
     SPI1STATbits.SPIROV = 0;
   }
 
-  _SPI1IF = 0;    //clear interrupt flag since we are about to write new value
+  //clear interrupt flag since we are about to write new value
+  _SPI1IF = 0;
+  // put new value into SPI buffer for output
   SPI1BUF = u16_c;
-  while (!_SPI1IF) { //wait for operation to complete
+  //wait for operation to complete - interrupt flag will get set
+  while (!_SPI1IF) { 
   }
-
+  // return value is in buffer
   return(SPI1BUF);
 }

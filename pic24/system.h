@@ -31,7 +31,22 @@
 #define ADDRESS2              _RB4
 #endif
 
+// LED is RA0 / AN0 on pin 2
+#define LED                   _RA0
+#define LED_CFG               _PCFG0
+#define LED_TRIS              _TRISA0
+#define LED_ON()              _LATA0 = 1
+#define LED_OFF()             _LATA0 = 0
+
+/**
+ * Initialize basic system functions (digital, analog, SPI)
+ */
 void systemInit();
+
+/**
+ * Get the numeric value represented by user configurable address select bits
+ * @return node address value 0-7
+ */
 uint8_t getNodeAddress();
 
 #endif	/* SYSTEM_H */

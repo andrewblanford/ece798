@@ -21,6 +21,11 @@ void configDigital() {
     // RB4 digital input also
     ADDRESS2_TRIS = 1;
 #endif
+    
+    // configure the LED  as digital output
+    LED_TRIS = 0;
+    LED_CFG = 1;
+    LED_ON();
 }
 
 uint8_t getNodeAddress() {

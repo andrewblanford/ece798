@@ -6,15 +6,11 @@
  version 2 as published by the Free Software Foundation.
  */
 
-
 #include "RF24_nRF24L01.h"
 #include "RF24.h"
 #include "spi.h"
 #include <string.h>
 #include "system.h"
-
-
-//#include "pic24_all.h"
 
 // RF24 variables
 static uint8_t payload_size = 32;

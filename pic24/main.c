@@ -68,6 +68,9 @@
 #include "RF24.h"
 #include "adc.h"
 
+// time between ADC captures
+#define MEASUREMENT_INTERVAL_MS 1500
+
 int main (void) {
   // up to 8 potential pipe addresses based on address select bits
   const uint8_t pipe[][6] = {"1Node", "2Node", "3Node", "4Node", "5Node", "6Node", "7Node", "8Node"};
@@ -85,18 +88,22 @@ int main (void) {
   // setup RF24 library (requires SPI already enabled)
   RF24_begin();
   RF24_setRetries(15, 15);
-  RF24_openWritingPipe(pipe[pipeAddr]);
   RF24_setAutoAck_all(1);
+  RF24_openWritingPipe(pipe[pipeAddr]);
   
   while (1) {
-    DELAY_MS(1500);
+    DELAY_MS(MEASUREMENT_INTERVAL_MS);
+    // turn off the LED
+    LED_OFF();
+    
+    // collect a measurement
     aValue = getADC1();
 
     // put radio in transmit mode
     RF24_stopListening();
     // send 1 32bit value
     if (!RF24_write(&aValue, sizeof(uint32_t))) {
-
+        LED_ON();
     }
     // return radio to listening mode
     RF24_startListening();
