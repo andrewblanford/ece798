@@ -25,7 +25,7 @@ import graphutils
 radio = RF24(RPI_V2_GPIO_P1_22, BCM2835_SPI_CS0, BCM2835_SPI_SPEED_8MHZ)
 
 # Graphing Interval in seconds
-GRAPH_INTERVAL = 1 * 10
+GRAPH_INTERVAL = 1 * 20
 ##########################################
 
 # Node1-5 addresses 
