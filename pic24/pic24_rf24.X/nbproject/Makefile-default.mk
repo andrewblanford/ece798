@@ -77,8 +77,8 @@ ifneq ($(INFORMATION_MESSAGE), )
 endif
 	${MAKE}  -f nbproject/Makefile-default.mk dist/${CND_CONF}/${IMAGE_TYPE}/pic24_rf24.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
-MP_PROCESSOR_OPTION=24HJ128GP502
-MP_LINKER_FILE_OPTION=,--script=p24HJ128GP502.gld
+MP_PROCESSOR_OPTION=24HJ64GP202
+MP_LINKER_FILE_OPTION=,--script=p24HJ64GP202.gld
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)

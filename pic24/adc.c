@@ -65,19 +65,16 @@ void configAnalog() {
  *          corresponding to the ADC conversion result.
  */
 uint16_t getADC1(void) {
-  uint8_t u8_wdtState;
-  uint16_t result;
-
-  u8_wdtState = _SWDTEN;                  //save WDT state
-  _SWDTEN = 1;                            //enable WDT since we block
-  
+  uint16_t result = 0xFF;
+ 
   // enable the ADC
   AD1CON1bits.ADON = 1;
-  
+  // per data sheet, should clear DONE before setting SAMP if 
+  // monitoring DONE
+  AD1CON1bits.DONE = 0;
   AD1CON1bits.SAMP=1;                     //start sampling
   Nop();                                  //takes one clock to clear previous DONE flag, delay before checking.
   while(!AD1CON1bits.DONE);               //wait for conversion to finish
-  _SWDTEN = u8_wdtState;                  //restore WDT
   
   // store the result locally
   result = ADC1BUF0;

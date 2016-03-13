@@ -4,7 +4,7 @@ Tool Name:
   c:\program files (x86)\microchip\xc16\v1.25\bin\bin\..\bin/elf-ld.exe
 
 Command:
-  -p24HJ128GP502 \
+  -p24HJ64GP202 \
   -o \
   dist/default/production/pic24_rf24.X.production.elf \
   -Lc:/program files (x86)/microchip/xc16/v1.25/bin/bin/.. \
@@ -21,7 +21,7 @@ Command:
   build/default/production/_ext/1472/spi.o \
   build/default/production/_ext/1472/system.o \
   --defsym=__MPLAB_BUILD=1 \
-  -Tp24HJ128GP502.gld.00 \
+  -Tp24HJ64GP202.gld.00 \
   --stack=16 \
   --check-sections \
   --data-init \
@@ -44,7 +44,7 @@ Command:
   -end-group \
 
 
-Optional library libp24HJ128GP502.a not found
+Optional library libp24HJ64GP202.a not found
 Archive member included because of file (symbol)
 
 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
@@ -65,17 +65,17 @@ c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-c-elf.a(me
 
 xc16-ld 1.25 (A)
 
-Program Memory  [Origin = 0x200, Length = 0x15600]
+Program Memory  [Origin = 0x200, Length = 0xaa00]
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x346           0x4e9  (1257)
 .const                       0x546                0x42            0x63  (99)
-.text                        0x588               0xa2c           0xf42  (3906)
-.init.delay32                0xfb4                0x1c            0x2a  (42)
-.dinit                       0xfd0                0x16            0x21  (33)
+.text                        0x588               0xa24           0xf36  (3894)
+.init.delay32                0xfac                0x1c            0x2a  (42)
+.dinit                       0xfc8                0x16            0x21  (33)
 
-                     Total program memory used (bytes):         0x14d9  (5337) 4%
+                     Total program memory used (bytes):         0x14cd  (5325) 8%
 
 
 Data Memory  [Origin = 0x800, Length = 0x2000]
@@ -167,15 +167,15 @@ External Symbols in Program Memory (by address):
                   0x000dd6                  _RF24_getCRCLength
                   0x000e14                  _RF24_disableCRC
                   0x000e28                  _RF24_setRetries
-                  0x000e44                  _configAnalog
-                  0x000e80                  _getADC1
-                  0x000ebc                  _configSPI1
-                  0x000efa                  _writeSPI1
-                  0x000f22                  _main
-                  0x000f72                  _systemInit
-                  0x000f7e                  _configDigital
-                  0x000f8e                  _getNodeAddress
-                  0x000fb4                  ___delay32
+                  0x000e44                  _configSPI1
+                  0x000e82                  _writeSPI1
+                  0x000eaa                  _configAnalog
+                  0x000ee6                  _getADC1
+                  0x000f0a                  _main
+                  0x000f6a                  _systemInit
+                  0x000f76                  _configDigital
+                  0x000f86                  _getNodeAddress
+                  0x000fac                  ___delay32
 
 External Symbols in Program Memory (by name):
 
@@ -233,7 +233,7 @@ External Symbols in Program Memory (by name):
                   0x000628                  _RF24_write_register
                   0x0005e4                  _RF24_write_registers
                   0x00029a                  __DefaultInterrupt
-                  0x000fb4                  ___delay32
+                  0x000fac                  ___delay32
                   0x0003e6                  ___divdi3
                   0x000446                  ___moddi3
                   0x0004a2                  ___muldi3
@@ -245,15 +245,15 @@ External Symbols in Program Memory (by name):
                   0x00023c                  __data_init_standard
                   0x00022c                  __psv_init
                   0x000200                  __resetPRI
-                  0x000e44                  _configAnalog
-                  0x000f7e                  _configDigital
-                  0x000ebc                  _configSPI1
-                  0x000e80                  _getADC1
-                  0x000f8e                  _getNodeAddress
-                  0x000f22                  _main
+                  0x000eaa                  _configAnalog
+                  0x000f76                  _configDigital
+                  0x000e44                  _configSPI1
+                  0x000ee6                  _getADC1
+                  0x000f86                  _getNodeAddress
+                  0x000f0a                  _main
                   0x000538                  _memcpy
-                  0x000f72                  _systemInit
-                  0x000efa                  _writeSPI1
+                  0x000f6a                  _systemInit
+                  0x000e82                  _writeSPI1
 
 Memory Configuration
 
@@ -263,7 +263,7 @@ reset            0x000000           0x000004
 ivt              0x000004           0x0000fc  
 _reserved        0x000100           0x000004  
 aivt             0x000104           0x0000fc  
-program          0x000200           0x015600           xr
+program          0x000200           0x00aa00           xr
 FBS              0xf80000           0x000002  
 FSS              0xf80002           0x000002  
 FGS              0xf80004           0x000002  
@@ -286,7 +286,7 @@ LOAD build/default/production/_ext/1472/main.o
 LOAD build/default/production/_ext/1472/spi.o
 LOAD build/default/production/_ext/1472/system.o
                     0x0001                  __MPLAB_BUILD = 0x1
-LOAD p24HJ128GP502
+LOAD p24HJ64GP202
 LOAD c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\libfx-elf.a
                     0xf80000                  __FBS = 0xf80000
                     0xf80002                  __FSS = 0xf80002
@@ -300,8 +300,9 @@ LOAD c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\libfx-elf.a
                     0xf80012                  __FUID1 = 0xf80012
                     0xf80014                  __FUID2 = 0xf80014
                     0xf80016                  __FUID3 = 0xf80016
+                    0x0001                  __NO_HANDLES = 0x1
                     0x0200                  __CODE_BASE = 0x200
-                    0x15600                  __CODE_LENGTH = 0x15600
+                    0xaa00                  __CODE_LENGTH = 0xaa00
                     0x0004                  __IVT_BASE = 0x4
                     0x0104                  __AIVT_BASE = 0x104
                     0x0800                  __DATA_BASE = 0x800
@@ -402,13 +403,13 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x3306
+.debug_info       0x000000       0x31b3
  *(.debug_info)
  .debug_info      0x000000       0x1519 build/default/production/_ext/1472/RF24.o
- .debug_info      0x001519        0xb9d build/default/production/_ext/1472/adc.o
- .debug_info      0x0020b6        0x265 build/default/production/_ext/1472/main.o
- .debug_info      0x00231b        0xb23 build/default/production/_ext/1472/spi.o
- .debug_info      0x002e3e        0x4c8 build/default/production/_ext/1472/system.o
+ .debug_info      0x001519        0xa4a build/default/production/_ext/1472/adc.o
+ .debug_info      0x001f63        0x265 build/default/production/_ext/1472/main.o
+ .debug_info      0x0021c8        0xb23 build/default/production/_ext/1472/spi.o
+ .debug_info      0x002ceb        0x4c8 build/default/production/_ext/1472/system.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x57c
@@ -419,13 +420,13 @@ __FUID3
  .debug_abbrev    0x0003ac        0x122 build/default/production/_ext/1472/spi.o
  .debug_abbrev    0x0004ce         0xae build/default/production/_ext/1472/system.o
 
-.debug_line       0x000000       0x14d2
+.debug_line       0x000000       0x14e5
  *(.debug_line)
- .debug_line      0x000000        0xe4a build/default/production/_ext/1472/RF24.o
- .debug_line      0x000e4a        0x1c7 build/default/production/_ext/1472/adc.o
- .debug_line      0x001011        0x176 build/default/production/_ext/1472/main.o
- .debug_line      0x001187        0x1b7 build/default/production/_ext/1472/spi.o
- .debug_line      0x00133e        0x194 build/default/production/_ext/1472/system.o
+ .debug_line      0x000000        0xe49 build/default/production/_ext/1472/RF24.o
+ .debug_line      0x000e49        0x1be build/default/production/_ext/1472/adc.o
+ .debug_line      0x001007        0x195 build/default/production/_ext/1472/main.o
+ .debug_line      0x00119c        0x1b6 build/default/production/_ext/1472/spi.o
+ .debug_line      0x001352        0x193 build/default/production/_ext/1472/system.o
 
 .debug_frame      0x000000        0x434
  *(.debug_frame)
@@ -435,13 +436,13 @@ __FUID3
  .debug_frame     0x0003bc         0x34 build/default/production/_ext/1472/spi.o
  .debug_frame     0x0003f0         0x44 build/default/production/_ext/1472/system.o
 
-.debug_str        0x000000        0x134
+.debug_str        0x000000        0x12b
  *(.debug_str)
  .debug_str       0x000000         0x53 build/default/production/_ext/1472/RF24.o
- .debug_str       0x000053         0x59 build/default/production/_ext/1472/adc.o
- .debug_str       0x0000ac          0x9 build/default/production/_ext/1472/main.o
- .debug_str       0x0000b5         0x55 build/default/production/_ext/1472/spi.o
- .debug_str       0x00010a         0x2a build/default/production/_ext/1472/system.o
+ .debug_str       0x000053         0x50 build/default/production/_ext/1472/adc.o
+ .debug_str       0x0000a3          0x9 build/default/production/_ext/1472/main.o
+ .debug_str       0x0000ac         0x55 build/default/production/_ext/1472/spi.o
+ .debug_str       0x000101         0x2a build/default/production/_ext/1472/system.o
 
 .debug_loc
  *(.debug_loc)
@@ -522,8 +523,8 @@ __FUID3
                   0x000052          0x4 LONG 0x29a DEFINED (__U2TXInterrupt)?ABSOLUTE (__U2TXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000054          0x4 LONG 0x29a DEFINED (__SPI2ErrInterrupt)?ABSOLUTE (__SPI2ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000056          0x4 LONG 0x29a DEFINED (__SPI2Interrupt)?ABSOLUTE (__SPI2Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000058          0x4 LONG 0x29a DEFINED (__C1RxRdyInterrupt)?ABSOLUTE (__C1RxRdyInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00005a          0x4 LONG 0x29a DEFINED (__C1Interrupt)?ABSOLUTE (__C1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000058          0x4 LONG 0x29a DEFINED (__Interrupt34)?ABSOLUTE (__Interrupt34):ABSOLUTE (__DefaultInterrupt)
+                  0x00005a          0x4 LONG 0x29a DEFINED (__Interrupt35)?ABSOLUTE (__Interrupt35):ABSOLUTE (__DefaultInterrupt)
                   0x00005c          0x4 LONG 0x29a DEFINED (__DMA3Interrupt)?ABSOLUTE (__DMA3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00005e          0x4 LONG 0x29a DEFINED (__Interrupt37)?ABSOLUTE (__Interrupt37):ABSOLUTE (__DefaultInterrupt)
                   0x000060          0x4 LONG 0x29a DEFINED (__Interrupt38)?ABSOLUTE (__Interrupt38):ABSOLUTE (__DefaultInterrupt)
@@ -558,7 +559,7 @@ __FUID3
                   0x00009a          0x4 LONG 0x29a DEFINED (__CRCInterrupt)?ABSOLUTE (__CRCInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00009c          0x4 LONG 0x29a DEFINED (__DMA6Interrupt)?ABSOLUTE (__DMA6Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00009e          0x4 LONG 0x29a DEFINED (__DMA7Interrupt)?ABSOLUTE (__DMA7Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x0000a0          0x4 LONG 0x29a DEFINED (__C1TxReqInterrupt)?ABSOLUTE (__C1TxReqInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a0          0x4 LONG 0x29a DEFINED (__Interrupt70)?ABSOLUTE (__Interrupt70):ABSOLUTE (__DefaultInterrupt)
                   0x0000a2          0x4 LONG 0x29a DEFINED (__Interrupt71)?ABSOLUTE (__Interrupt71):ABSOLUTE (__DefaultInterrupt)
                   0x0000a4          0x4 LONG 0x29a DEFINED (__Interrupt72)?ABSOLUTE (__Interrupt72):ABSOLUTE (__DefaultInterrupt)
                   0x0000a6          0x4 LONG 0x29a DEFINED (__Interrupt73)?ABSOLUTE (__Interrupt73):ABSOLUTE (__DefaultInterrupt)
@@ -650,8 +651,8 @@ __FUID3
                   0x000152          0x4 LONG 0x29a DEFINED (__AltU2TXInterrupt)?ABSOLUTE (__AltU2TXInterrupt):DEFINED (__U2TXInterrupt)?ABSOLUTE (__U2TXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000154          0x4 LONG 0x29a DEFINED (__AltSPI2ErrInterrupt)?ABSOLUTE (__AltSPI2ErrInterrupt):DEFINED (__SPI2ErrInterrupt)?ABSOLUTE (__SPI2ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000156          0x4 LONG 0x29a DEFINED (__AltSPI2Interrupt)?ABSOLUTE (__AltSPI2Interrupt):DEFINED (__SPI2Interrupt)?ABSOLUTE (__SPI2Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000158          0x4 LONG 0x29a DEFINED (__AltC1RxRdyInterrupt)?ABSOLUTE (__AltC1RxRdyInterrupt):DEFINED (__C1RxRdyInterrupt)?ABSOLUTE (__C1RxRdyInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00015a          0x4 LONG 0x29a DEFINED (__AltC1Interrupt)?ABSOLUTE (__AltC1Interrupt):DEFINED (__C1Interrupt)?ABSOLUTE (__C1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000158          0x4 LONG 0x29a DEFINED (__AltInterrupt34)?ABSOLUTE (__AltInterrupt34):DEFINED (__Interrupt34)?ABSOLUTE (__Interrupt34):ABSOLUTE (__DefaultInterrupt)
+                  0x00015a          0x4 LONG 0x29a DEFINED (__AltInterrupt35)?ABSOLUTE (__AltInterrupt35):DEFINED (__Interrupt35)?ABSOLUTE (__Interrupt35):ABSOLUTE (__DefaultInterrupt)
                   0x00015c          0x4 LONG 0x29a DEFINED (__AltDMA3Interrupt)?ABSOLUTE (__AltDMA3Interrupt):DEFINED (__DMA3Interrupt)?ABSOLUTE (__DMA3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00015e          0x4 LONG 0x29a DEFINED (__AltInterrupt37)?ABSOLUTE (__AltInterrupt37):DEFINED (__Interrupt37)?ABSOLUTE (__Interrupt37):ABSOLUTE (__DefaultInterrupt)
                   0x000160          0x4 LONG 0x29a DEFINED (__AltInterrupt38)?ABSOLUTE (__AltInterrupt38):DEFINED (__Interrupt38)?ABSOLUTE (__Interrupt38):ABSOLUTE (__DefaultInterrupt)
@@ -686,7 +687,7 @@ __FUID3
                   0x00019a          0x4 LONG 0x29a DEFINED (__AltCRCInterrupt)?ABSOLUTE (__AltCRCInterrupt):DEFINED (__CRCInterrupt)?ABSOLUTE (__CRCInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00019c          0x4 LONG 0x29a DEFINED (__AltDMA6Interrupt)?ABSOLUTE (__AltDMA6Interrupt):DEFINED (__DMA6Interrupt)?ABSOLUTE (__DMA6Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00019e          0x4 LONG 0x29a DEFINED (__AltDMA7Interrupt)?ABSOLUTE (__AltDMA7Interrupt):DEFINED (__DMA7Interrupt)?ABSOLUTE (__DMA7Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x0001a0          0x4 LONG 0x29a DEFINED (__AltC1TxReqInterrupt)?ABSOLUTE (__AltC1TxReqInterrupt):DEFINED (__C1TxReqInterrupt)?ABSOLUTE (__C1TxReqInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0001a0          0x4 LONG 0x29a DEFINED (__AltInterrupt70)?ABSOLUTE (__AltInterrupt70):DEFINED (__Interrupt70)?ABSOLUTE (__Interrupt70):ABSOLUTE (__DefaultInterrupt)
                   0x0001a2          0x4 LONG 0x29a DEFINED (__AltInterrupt71)?ABSOLUTE (__AltInterrupt71):DEFINED (__Interrupt71)?ABSOLUTE (__Interrupt71):ABSOLUTE (__DefaultInterrupt)
                   0x0001a4          0x4 LONG 0x29a DEFINED (__AltInterrupt72)?ABSOLUTE (__AltInterrupt72):DEFINED (__Interrupt72)?ABSOLUTE (__Interrupt72):ABSOLUTE (__DefaultInterrupt)
                   0x0001a6          0x4 LONG 0x29a DEFINED (__AltInterrupt73)?ABSOLUTE (__AltInterrupt73):DEFINED (__Interrupt73)?ABSOLUTE (__Interrupt73):ABSOLUTE (__DefaultInterrupt)
@@ -1222,203 +1223,6 @@ __FUID3
                     0x03e2                  _DMACS1bits = 0x3e2
                     0x03e4                  DSADR = 0x3e4
                     0x03e4                  _DSADR = 0x3e4
-                    0x0400                  C1CTRL1 = 0x400
-                    0x0400                  _C1CTRL1 = 0x400
-                    0x0400                  _C1CTRL1bits = 0x400
-                    0x0402                  C1CTRL2 = 0x402
-                    0x0402                  _C1CTRL2 = 0x402
-                    0x0402                  _C1CTRL2bits = 0x402
-                    0x0404                  C1VEC = 0x404
-                    0x0404                  _C1VEC = 0x404
-                    0x0404                  _C1VECbits = 0x404
-                    0x0406                  C1FCTRL = 0x406
-                    0x0406                  _C1FCTRL = 0x406
-                    0x0406                  _C1FCTRLbits = 0x406
-                    0x0408                  C1FIFO = 0x408
-                    0x0408                  _C1FIFO = 0x408
-                    0x0408                  _C1FIFObits = 0x408
-                    0x040a                  C1INTF = 0x40a
-                    0x040a                  _C1INTF = 0x40a
-                    0x040a                  _C1INTFbits = 0x40a
-                    0x040c                  C1INTE = 0x40c
-                    0x040c                  _C1INTE = 0x40c
-                    0x040c                  _C1INTEbits = 0x40c
-                    0x040e                  C1EC = 0x40e
-                    0x040e                  _C1EC = 0x40e
-                    0x040e                  _C1ECbits = 0x40e
-                    0x040e                  C1RERRCNT = 0x40e
-                    0x040e                  _C1RERRCNT = 0x40e
-                    0x040f                  C1TERRCNT = 0x40f
-                    0x040f                  _C1TERRCNT = 0x40f
-                    0x0410                  C1CFG1 = 0x410
-                    0x0410                  _C1CFG1 = 0x410
-                    0x0410                  _C1CFG1bits = 0x410
-                    0x0412                  C1CFG2 = 0x412
-                    0x0412                  _C1CFG2 = 0x412
-                    0x0412                  _C1CFG2bits = 0x412
-                    0x0414                  C1FEN1 = 0x414
-                    0x0414                  _C1FEN1 = 0x414
-                    0x0414                  _C1FEN1bits = 0x414
-                    0x0418                  C1FMSKSEL1 = 0x418
-                    0x0418                  _C1FMSKSEL1 = 0x418
-                    0x0418                  _C1FMSKSEL1bits = 0x418
-                    0x041a                  C1FMSKSEL2 = 0x41a
-                    0x041a                  _C1FMSKSEL2 = 0x41a
-                    0x041a                  _C1FMSKSEL2bits = 0x41a
-                    0x0420                  C1BUFPNT1 = 0x420
-                    0x0420                  _C1BUFPNT1 = 0x420
-                    0x0420                  _C1BUFPNT1bits = 0x420
-                    0x0420                  C1RXFUL1 = 0x420
-                    0x0420                  _C1RXFUL1 = 0x420
-                    0x0420                  _C1RXFUL1bits = 0x420
-                    0x0422                  C1BUFPNT2 = 0x422
-                    0x0422                  _C1BUFPNT2 = 0x422
-                    0x0422                  _C1BUFPNT2bits = 0x422
-                    0x0422                  C1RXFUL2 = 0x422
-                    0x0422                  _C1RXFUL2 = 0x422
-                    0x0422                  _C1RXFUL2bits = 0x422
-                    0x0424                  C1BUFPNT3 = 0x424
-                    0x0424                  _C1BUFPNT3 = 0x424
-                    0x0424                  _C1BUFPNT3bits = 0x424
-                    0x0426                  C1BUFPNT4 = 0x426
-                    0x0426                  _C1BUFPNT4 = 0x426
-                    0x0426                  _C1BUFPNT4bits = 0x426
-                    0x0428                  C1RXOVF1 = 0x428
-                    0x0428                  _C1RXOVF1 = 0x428
-                    0x0428                  _C1RXOVF1bits = 0x428
-                    0x042a                  C1RXOVF2 = 0x42a
-                    0x042a                  _C1RXOVF2 = 0x42a
-                    0x042a                  _C1RXOVF2bits = 0x42a
-                    0x0430                  C1RXM0SID = 0x430
-                    0x0430                  _C1RXM0SID = 0x430
-                    0x0430                  _C1RXM0SIDbits = 0x430
-                    0x0430                  C1TR01CON = 0x430
-                    0x0430                  _C1TR01CON = 0x430
-                    0x0430                  _C1TR01CONbits = 0x430
-                    0x0432                  C1RXM0EID = 0x432
-                    0x0432                  _C1RXM0EID = 0x432
-                    0x0432                  _C1RXM0EIDbits = 0x432
-                    0x0432                  C1TR23CON = 0x432
-                    0x0432                  _C1TR23CON = 0x432
-                    0x0432                  _C1TR23CONbits = 0x432
-                    0x0434                  C1RXM1SID = 0x434
-                    0x0434                  _C1RXM1SID = 0x434
-                    0x0434                  _C1RXM1SIDbits = 0x434
-                    0x0434                  C1TR45CON = 0x434
-                    0x0434                  _C1TR45CON = 0x434
-                    0x0434                  _C1TR45CONbits = 0x434
-                    0x0436                  C1RXM1EID = 0x436
-                    0x0436                  _C1RXM1EID = 0x436
-                    0x0436                  _C1RXM1EIDbits = 0x436
-                    0x0436                  C1TR67CON = 0x436
-                    0x0436                  _C1TR67CON = 0x436
-                    0x0436                  _C1TR67CONbits = 0x436
-                    0x0438                  C1RXM2SID = 0x438
-                    0x0438                  _C1RXM2SID = 0x438
-                    0x0438                  _C1RXM2SIDbits = 0x438
-                    0x043a                  C1RXM2EID = 0x43a
-                    0x043a                  _C1RXM2EID = 0x43a
-                    0x043a                  _C1RXM2EIDbits = 0x43a
-                    0x0440                  C1RXD = 0x440
-                    0x0440                  _C1RXD = 0x440
-                    0x0440                  C1RXF0SID = 0x440
-                    0x0440                  _C1RXF0SID = 0x440
-                    0x0440                  _C1RXF0SIDbits = 0x440
-                    0x0442                  C1RXF0EID = 0x442
-                    0x0442                  _C1RXF0EID = 0x442
-                    0x0442                  _C1RXF0EIDbits = 0x442
-                    0x0442                  C1TXD = 0x442
-                    0x0442                  _C1TXD = 0x442
-                    0x0444                  C1RXF1SID = 0x444
-                    0x0444                  _C1RXF1SID = 0x444
-                    0x0444                  _C1RXF1SIDbits = 0x444
-                    0x0446                  C1RXF1EID = 0x446
-                    0x0446                  _C1RXF1EID = 0x446
-                    0x0446                  _C1RXF1EIDbits = 0x446
-                    0x0448                  C1RXF2SID = 0x448
-                    0x0448                  _C1RXF2SID = 0x448
-                    0x0448                  _C1RXF2SIDbits = 0x448
-                    0x044a                  C1RXF2EID = 0x44a
-                    0x044a                  _C1RXF2EID = 0x44a
-                    0x044a                  _C1RXF2EIDbits = 0x44a
-                    0x044c                  C1RXF3SID = 0x44c
-                    0x044c                  _C1RXF3SID = 0x44c
-                    0x044c                  _C1RXF3SIDbits = 0x44c
-                    0x044e                  C1RXF3EID = 0x44e
-                    0x044e                  _C1RXF3EID = 0x44e
-                    0x044e                  _C1RXF3EIDbits = 0x44e
-                    0x0450                  C1RXF4SID = 0x450
-                    0x0450                  _C1RXF4SID = 0x450
-                    0x0450                  _C1RXF4SIDbits = 0x450
-                    0x0452                  C1RXF4EID = 0x452
-                    0x0452                  _C1RXF4EID = 0x452
-                    0x0452                  _C1RXF4EIDbits = 0x452
-                    0x0454                  C1RXF5SID = 0x454
-                    0x0454                  _C1RXF5SID = 0x454
-                    0x0454                  _C1RXF5SIDbits = 0x454
-                    0x0456                  C1RXF5EID = 0x456
-                    0x0456                  _C1RXF5EID = 0x456
-                    0x0456                  _C1RXF5EIDbits = 0x456
-                    0x0458                  C1RXF6SID = 0x458
-                    0x0458                  _C1RXF6SID = 0x458
-                    0x0458                  _C1RXF6SIDbits = 0x458
-                    0x045a                  C1RXF6EID = 0x45a
-                    0x045a                  _C1RXF6EID = 0x45a
-                    0x045a                  _C1RXF6EIDbits = 0x45a
-                    0x045c                  C1RXF7SID = 0x45c
-                    0x045c                  _C1RXF7SID = 0x45c
-                    0x045c                  _C1RXF7SIDbits = 0x45c
-                    0x045e                  C1RXF7EID = 0x45e
-                    0x045e                  _C1RXF7EID = 0x45e
-                    0x045e                  _C1RXF7EIDbits = 0x45e
-                    0x0460                  C1RXF8SID = 0x460
-                    0x0460                  _C1RXF8SID = 0x460
-                    0x0460                  _C1RXF8SIDbits = 0x460
-                    0x0462                  C1RXF8EID = 0x462
-                    0x0462                  _C1RXF8EID = 0x462
-                    0x0462                  _C1RXF8EIDbits = 0x462
-                    0x0464                  C1RXF9SID = 0x464
-                    0x0464                  _C1RXF9SID = 0x464
-                    0x0464                  _C1RXF9SIDbits = 0x464
-                    0x0466                  C1RXF9EID = 0x466
-                    0x0466                  _C1RXF9EID = 0x466
-                    0x0466                  _C1RXF9EIDbits = 0x466
-                    0x0468                  C1RXF10SID = 0x468
-                    0x0468                  _C1RXF10SID = 0x468
-                    0x0468                  _C1RXF10SIDbits = 0x468
-                    0x046a                  C1RXF10EID = 0x46a
-                    0x046a                  _C1RXF10EID = 0x46a
-                    0x046a                  _C1RXF10EIDbits = 0x46a
-                    0x046c                  C1RXF11SID = 0x46c
-                    0x046c                  _C1RXF11SID = 0x46c
-                    0x046c                  _C1RXF11SIDbits = 0x46c
-                    0x046e                  C1RXF11EID = 0x46e
-                    0x046e                  _C1RXF11EID = 0x46e
-                    0x046e                  _C1RXF11EIDbits = 0x46e
-                    0x0470                  C1RXF12SID = 0x470
-                    0x0470                  _C1RXF12SID = 0x470
-                    0x0470                  _C1RXF12SIDbits = 0x470
-                    0x0472                  C1RXF12EID = 0x472
-                    0x0472                  _C1RXF12EID = 0x472
-                    0x0472                  _C1RXF12EIDbits = 0x472
-                    0x0474                  C1RXF13SID = 0x474
-                    0x0474                  _C1RXF13SID = 0x474
-                    0x0474                  _C1RXF13SIDbits = 0x474
-                    0x0476                  C1RXF13EID = 0x476
-                    0x0476                  _C1RXF13EID = 0x476
-                    0x0476                  _C1RXF13EIDbits = 0x476
-                    0x0478                  C1RXF14SID = 0x478
-                    0x0478                  _C1RXF14SID = 0x478
-                    0x0478                  _C1RXF14SIDbits = 0x478
-                    0x047a                  C1RXF14EID = 0x47a
-                    0x047a                  _C1RXF14EID = 0x47a
-                    0x047a                  _C1RXF14EIDbits = 0x47a
-                    0x047c                  C1RXF15SID = 0x47c
-                    0x047c                  _C1RXF15SID = 0x47c
-                    0x047c                  _C1RXF15SIDbits = 0x47c
-                    0x047e                  C1RXF15EID = 0x47e
-                    0x047e                  _C1RXF15EID = 0x47e
-                    0x047e                  _C1RXF15EIDbits = 0x47e
                     0x0600                  PMCON = 0x600
                     0x0600                  _PMCON = 0x600
                     0x0600                  _PMCONbits = 0x600
@@ -1506,9 +1310,6 @@ __FUID3
                     0x06ae                  RPINR23 = 0x6ae
                     0x06ae                  _RPINR23 = 0x6ae
                     0x06ae                  _RPINR23bits = 0x6ae
-                    0x06b4                  RPINR26 = 0x6b4
-                    0x06b4                  _RPINR26 = 0x6b4
-                    0x06b4                  _RPINR26bits = 0x6b4
                     0x06c0                  RPOR0 = 0x6c0
                     0x06c0                  _RPOR0 = 0x6c0
                     0x06c0                  _RPOR0bits = 0x6c0
@@ -1572,8 +1373,6 @@ __FUID3
                     0x0774                  PMD3 = 0x774
                     0x0774                  _PMD3 = 0x774
                     0x0774                  _PMD3bits = 0x774
-                    0x0440                  CAN1 = 0x440
-                    0x0440                  _CAN1 = 0x440
                     0x0140                  IC1 = 0x140
                     0x0140                  _IC1 = 0x140
                     0x0144                  IC2 = 0x144
@@ -1608,44 +1407,44 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x000078        0x3b7
+                  0x000078        0x38e
  .debug_pubtypes
                   0x000078         0xb5 build/default/production/_ext/1472/RF24.o
  .debug_pubtypes
-                  0x00012d        0x118 build/default/production/_ext/1472/adc.o
+                  0x00012d         0xef build/default/production/_ext/1472/adc.o
  .debug_pubtypes
-                  0x000245         0x48 build/default/production/_ext/1472/main.o
+                  0x00021c         0x48 build/default/production/_ext/1472/main.o
  .debug_pubtypes
-                  0x00028d        0x104 build/default/production/_ext/1472/spi.o
+                  0x000264        0x104 build/default/production/_ext/1472/spi.o
  .debug_pubtypes
-                  0x000391         0x9e build/default/production/_ext/1472/system.o
+                  0x000368         0x9e build/default/production/_ext/1472/system.o
 
 __c30_signature
-                  0x00042f         0x48
+                  0x000406         0x48
  __c30_signature
-                  0x00042f          0x6 build/default/production/_ext/1472/RF24.o
+                  0x000406          0x6 build/default/production/_ext/1472/RF24.o
  __c30_signature
-                  0x000435          0x6 build/default/production/_ext/1472/adc.o
+                  0x00040c          0x6 build/default/production/_ext/1472/adc.o
  __c30_signature
-                  0x00043b          0x6 build/default/production/_ext/1472/main.o
+                  0x000412          0x6 build/default/production/_ext/1472/main.o
  __c30_signature
-                  0x000441          0x6 build/default/production/_ext/1472/spi.o
+                  0x000418          0x6 build/default/production/_ext/1472/spi.o
  __c30_signature
-                  0x000447          0x6 build/default/production/_ext/1472/system.o
+                  0x00041e          0x6 build/default/production/_ext/1472/system.o
  __c30_signature
-                  0x00044d          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
+                  0x000424          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
  __c30_signature
-                  0x000453          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
+                  0x00042a          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
  __c30_signature
-                  0x000459          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
+                  0x000430          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
  __c30_signature
-                  0x00045f          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000436          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
  __c30_signature
-                  0x000465          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\libm-elf.a(muldi3.eo)
+                  0x00043c          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\libm-elf.a(muldi3.eo)
  __c30_signature
-                  0x00046b          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\libm-elf.a(umuldi3.eo)
+                  0x000442          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\libm-elf.a(umuldi3.eo)
  __c30_signature
-                  0x000471          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-c-elf.a(memcpy.XXeo)
+                  0x000448          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-c-elf.a(memcpy.XXeo)
 
 .nbss               0x0800          0x6
  .nbss              0x0800          0x6 build/default/production/_ext/1472/RF24.o
@@ -1687,7 +1486,7 @@ __c30_signature
  .const             0x8546         0x30 build/default/production/_ext/1472/main.o
  .const             0x8576         0x12 build/default/production/_ext/1472/RF24.o
 
-.text             0x000588        0xa2c
+.text             0x000588        0xa24
  .text            0x000588        0x8bc build/default/production/_ext/1472/RF24.o
                   0x000588                  _RF24_read_registers
                   0x0005ca                  _RF24_read_register
@@ -1742,22 +1541,22 @@ __c30_signature
                   0x000dd6                  _RF24_getCRCLength
                   0x000e14                  _RF24_disableCRC
                   0x000e28                  _RF24_setRetries
- .text            0x000e44         0x78 build/default/production/_ext/1472/adc.o
-                  0x000e44                  _configAnalog
-                  0x000e80                  _getADC1
- .text            0x000ebc         0x66 build/default/production/_ext/1472/spi.o
-                  0x000ebc                  _configSPI1
-                  0x000efa                  _writeSPI1
- .text            0x000f22         0x50 build/default/production/_ext/1472/main.o
-                  0x000f22                  _main
- .text            0x000f72         0x42 build/default/production/_ext/1472/system.o
-                  0x000f72                  _systemInit
-                  0x000f7e                  _configDigital
-                  0x000f8e                  _getNodeAddress
+ .text            0x000e44         0x66 build/default/production/_ext/1472/spi.o
+                  0x000e44                  _configSPI1
+                  0x000e82                  _writeSPI1
+ .text            0x000eaa         0x60 build/default/production/_ext/1472/adc.o
+                  0x000eaa                  _configAnalog
+                  0x000ee6                  _getADC1
+ .text            0x000f0a         0x60 build/default/production/_ext/1472/main.o
+                  0x000f0a                  _main
+ .text            0x000f6a         0x42 build/default/production/_ext/1472/system.o
+                  0x000f6a                  _systemInit
+                  0x000f76                  _configDigital
+                  0x000f86                  _getNodeAddress
 
-.init.delay32     0x000fb4         0x1c
- .init.delay32    0x000fb4         0x1c c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
-                  0x000fb4                  ___delay32
+.init.delay32     0x000fac         0x1c
+ .init.delay32    0x000fac         0x1c c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
+                  0x000fac                  ___delay32
 
-.dinit            0x000fd0         0x16
- .dinit           0x000fd0         0x16 data_init
+.dinit            0x000fc8         0x16
+ .dinit           0x000fc8         0x16 data_init
