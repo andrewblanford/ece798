@@ -1,3 +1,26 @@
+// *****************************************************************************
+//    Author: Andrew Blanford
+//
+//    Permission to use, copy, modify, and distribute this software and its
+//    documentation for any purpose, without fee, and without written agreement is
+//    hereby granted, provided that the above copyright notice, the following
+//    two paragraphs and the authors appear in all copies of this software.
+//
+//    IN NO EVENT SHALL THE "AUTHORS" BE LIABLE TO ANY PARTY FOR
+//    DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING OUT
+//    OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF THE "AUTHORS"
+//    HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
+//    THE "AUTHORS" SPECIFICALLY DISCLAIMS ANY WARRANTIES,
+//    INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+//    AND FITNESS FOR A PARTICULAR PURPOSE.  THE SOFTWARE PROVIDED HEREUNDER IS
+//    ON AN "AS IS" BASIS, AND THE "AUTHORS" HAS NO OBLIGATION TO
+//    PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS."
+//
+//    Please maintain this header in its entirety when copying/modifying
+//    these files.
+//
+// *****************************************************************************
 #include "system.h"
 #include "spi.h"
 #include "adc.h"
@@ -21,6 +44,11 @@ void configDigital() {
     // RB4 digital input also
     ADDRESS2_TRIS = 1;
 #endif
+    
+    // configure the LED  as digital output
+    LED_TRIS = 0;
+    LED_CFG = 1;
+    LED_ON();
 }
 
 uint8_t getNodeAddress() {

@@ -1,9 +1,26 @@
-/* 
- * File:   spi.h
- * Author: andrew
- *
- * Created on January 30, 2016, 3:33 PM
- */
+// *****************************************************************************
+//    Author: Andrew Blanford
+//
+//    Permission to use, copy, modify, and distribute this software and its
+//    documentation for any purpose, without fee, and without written agreement is
+//    hereby granted, provided that the above copyright notice, the following
+//    two paragraphs and the authors appear in all copies of this software.
+//
+//    IN NO EVENT SHALL THE "AUTHORS" BE LIABLE TO ANY PARTY FOR
+//    DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING OUT
+//    OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF THE "AUTHORS"
+//    HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
+//    THE "AUTHORS" SPECIFICALLY DISCLAIMS ANY WARRANTIES,
+//    INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+//    AND FITNESS FOR A PARTICULAR PURPOSE.  THE SOFTWARE PROVIDED HEREUNDER IS
+//    ON AN "AS IS" BASIS, AND THE "AUTHORS" HAS NO OBLIGATION TO
+//    PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS."
+//
+//    Please maintain this header in its entirety when copying/modifying
+//    these files.
+//
+// *****************************************************************************
 
 #ifndef SPI_H
 #define	SPI_H
@@ -11,9 +28,10 @@
 #include <stdint.h>
 
 // CSN = RB3/AN5
+// CSN is active low
 #define CSN_TRIS              _TRISB3
 #define CSN_CFG               _PCFG5
-#define SLAVE_ENABLE()        _LATB3 = 0  // active low
+#define SLAVE_ENABLE()        _LATB3 = 0  
 #define SLAVE_DISABLE()       _LATB3 = 1
 
 // SDO = RB13/RP13/AN11
@@ -38,7 +56,7 @@
 #define RPSDI1               14
 
 // SPI1 Configuration (SPI1CON1))
-//spi clock = 40MHz/16*1 = 40MHz/16 = 2MHz
+//spi clock = 40MHz/16*1 = 40MHz/16 = 2.5 MHz
 // primary prescale 16:1 (Bit 0:1 = 1)
 #define SPI1_PRI_PRESCALE    0x0001
 // secondary prescale 1:1 (Bit 4:2 = 111)
@@ -72,8 +90,17 @@
     SPI1_DISSDO         | \
     SPI1_DISSCK)
 
+/** 
+ * Configures the SPI1 module for use on the pins identified above 
+ * SPI1_CONFIG includes all necessary bits for SPIxCON1 
+ */
 void configSPI1();
 
+/**
+ * Send / Receive from SPI1
+ * @param u16_c data to send
+ * @return data received
+ */
 uint16_t writeSPI1(uint16_t u16_c);
 
 #endif	/* SPI_H */
